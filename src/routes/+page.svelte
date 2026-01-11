@@ -189,9 +189,13 @@
 <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/70 border-b border-white/5">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
-			<a href="/" class="flex items-center gap-2">
+			<a href="/" class="flex items-center gap-3">
 				<img src="/app-icon.png" alt="RepsForReels" class="w-10 h-10 rounded-xl" />
-				<img src="/logo-text-compact.svg" alt="RepsForReels" class="h-6" />
+				<span class="flex items-baseline">
+					<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#D4A574] via-[#E8C4A0] to-[#D4A574] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reps</span>
+					<span class="text-sm font-normal italic text-white/50 mx-0.5">For</span>
+					<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reels</span>
+				</span>
 			</a>
 			<div class="hidden md:flex items-center gap-8">
 				<a href="#features" class="text-text-secondary hover:text-white transition-colors text-sm">Features</a>
@@ -483,9 +487,13 @@
 
 	<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 		<!-- Logo -->
-		<div class="flex items-center justify-center gap-3 mb-8">
+		<div class="flex items-center justify-center gap-4 mb-8">
 			<img src="/app-icon.png" alt="RepsForReels" class="w-20 h-20 rounded-2xl" />
-			<img src="/logo-text-compact.svg" alt="RepsForReels" class="h-12" />
+			<span class="flex items-baseline">
+				<span class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-[#D4A574] via-[#E8C4A0] to-[#D4A574] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reps</span>
+				<span class="text-xl font-normal italic text-white/50 mx-1">For</span>
+				<span class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reels</span>
+			</span>
 		</div>
 
 		<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -521,9 +529,13 @@
 		<div class="grid md:grid-cols-4 gap-12 mb-12">
 			<!-- Brand -->
 			<div class="md:col-span-2">
-				<a href="/" class="flex items-center gap-2 mb-6">
+				<a href="/" class="flex items-center gap-3 mb-6">
 					<img src="/app-icon.png" alt="RepsForReels" class="w-12 h-12 rounded-xl" />
-					<img src="/logo-text-compact.svg" alt="RepsForReels" class="h-7" />
+					<span class="flex items-baseline">
+						<span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-[#D4A574] via-[#E8C4A0] to-[#D4A574] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reps</span>
+						<span class="text-base font-normal italic text-white/50 mx-0.5">For</span>
+						<span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reels</span>
+					</span>
 				</a>
 				<p class="text-text-secondary max-w-sm leading-relaxed">
 					Transform your screen time addiction into gains. No reps, no reels.
