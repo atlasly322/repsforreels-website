@@ -242,11 +242,16 @@
 				</p>
 
 				<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center sm:items-start">
-					<a href="#download" class="hover:opacity-80 transition-all hover:scale-105 transform">
-						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[44px] sm:h-[48px] md:h-[52px] w-auto" />
-					</a>
-					<a href="#download" class="hover:opacity-80 transition-all hover:scale-105 transform">
+					<button
+						onclick={() => alert('Coming soon to iOS! Join our waitlist to be notified when we launch.')}
+						class="relative hover:opacity-80 transition-all hover:scale-105 transform cursor-pointer"
+					>
+						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[44px] sm:h-[48px] md:h-[52px] w-auto opacity-70" />
+						<span class="absolute -top-2 -right-2 bg-accent text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full">SOON</span>
+					</button>
+					<a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" target="_blank" rel="noopener noreferrer" class="relative hover:opacity-80 transition-all hover:scale-105 transform">
 						<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[44px] sm:h-[48px] md:h-[52px] w-auto" />
+						<span class="absolute -top-2 -right-2 bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">BETA</span>
 					</a>
 				</div>
 
@@ -501,11 +506,16 @@
 		</p>
 
 		<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-			<a href="https://apps.apple.com/app/repsforreels" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-all hover:scale-105 transform">
-				<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto" />
-			</a>
-			<a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-all hover:scale-105 transform">
+			<button
+				onclick={() => alert('Coming soon to iOS! Join our waitlist to be notified when we launch.')}
+				class="relative hover:opacity-80 transition-all hover:scale-105 transform cursor-pointer"
+			>
+				<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto opacity-70" />
+				<span class="absolute -top-2 -right-2 bg-accent text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full">SOON</span>
+			</button>
+			<a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" target="_blank" rel="noopener noreferrer" class="relative hover:opacity-80 transition-all hover:scale-105 transform">
 				<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto" />
+				<span class="absolute -top-2 -right-2 bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">BETA</span>
 			</a>
 		</div>
 	</div>
