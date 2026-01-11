@@ -241,12 +241,12 @@
 					<span class="text-white font-medium">AI-powered pose detection</span> counts your reps automatically.
 				</p>
 
-				<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-					<a href="#download" class="hover:opacity-80 transition-opacity hover:scale-105 transform">
-						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[40px]" />
+				<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center sm:items-start">
+					<a href="#download" class="hover:opacity-80 transition-all hover:scale-105 transform">
+						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[44px] sm:h-[48px] md:h-[52px] w-auto" />
 					</a>
-					<a href="#download" class="hover:opacity-80 transition-opacity hover:scale-105 transform">
-						<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[40px]" />
+					<a href="#download" class="hover:opacity-80 transition-all hover:scale-105 transform">
+						<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[44px] sm:h-[48px] md:h-[52px] w-auto" />
 					</a>
 				</div>
 
@@ -500,12 +500,12 @@
 			Join thousands who are turning their scrolling addiction into a fitness superpower. Download now and start your journey.
 		</p>
 
-		<div class="flex flex-col sm:flex-row gap-4 justify-center">
-			<a href="#" class="hover:opacity-80 transition-opacity hover:scale-105 transform">
-				<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[50px]" />
+		<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+			<a href="#" class="hover:opacity-80 transition-all hover:scale-105 transform">
+				<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto" />
 			</a>
-			<a href="#" class="hover:opacity-80 transition-opacity hover:scale-105 transform">
-				<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[50px]" />
+			<a href="#" class="hover:opacity-80 transition-all hover:scale-105 transform">
+				<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto" />
 			</a>
 		</div>
 	</div>
