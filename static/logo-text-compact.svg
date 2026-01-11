@@ -1,0 +1,22 @@
+<svg width="500" height="80" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="50%" stop-color="#E8C4A0"/>
+      <stop offset="100%" stop-color="#D4A574"/>
+    </linearGradient>
+    <linearGradient id="instagramGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#833AB4"/>
+      <stop offset="33%" stop-color="#DD2A7B"/>
+      <stop offset="66%" stop-color="#F77737"/>
+      <stop offset="100%" stop-color="#FCAF45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Centered wordmark - no tagline -->
+  <g transform="translate(250, 0)">
+    <text x="-217" y="56" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="68" font-weight="800" letter-spacing="-2" fill="url(#goldGradient)">Reps</text>
+    <text x="-55" y="56" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="44" font-weight="400" font-style="italic" fill="rgba(255,255,255,0.5)">For</text>
+    <text x="17" y="56" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="68" font-weight="800" letter-spacing="-2" fill="url(#instagramGradient)">Reels</text>
+  </g>
+</svg>

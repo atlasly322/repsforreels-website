@@ -1,0 +1,59 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    RepsForReels Shield Logo
+    Matches Logo.tsx component exactly
+
+    Design: Shield shape with two horizontal arrows
+    - Left arrow: Instagram gradient (Reels)
+    - Right arrow: Gold (Reps)
+  -->
+  <defs>
+    <!-- Instagram gradient for left arrow (Reels) - diagonal bottom-left to top-right -->
+    <linearGradient id="instagramGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F58529"/>
+      <stop offset="50%" stop-color="#DD2A7B"/>
+      <stop offset="100%" stop-color="#8134AF"/>
+    </linearGradient>
+
+    <!-- Shield gradient for depth - matches colors.textPrimary to textSecondary -->
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.8)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield shape - centered and scaled -->
+  <g transform="translate(256, 256) scale(18) translate(-12, -12)">
+    <!-- Main shield body - matches colors.surface #1A1A1A -->
+    <path
+      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"
+      fill="#1A1A1A"
+      stroke="rgba(255,255,255,0.21)"
+      stroke-width="0.5"
+    />
+
+    <!-- Inner shield highlight -->
+    <path
+      d="M12 2.5L4.5 5.8v5.2c0 4.7 3.2 9.1 7.5 10.2 4.3-1.1 7.5-5.5 7.5-10.2V5.8L12 2.5z"
+      fill="none"
+      stroke="rgba(255,255,255,0.1)"
+      stroke-width="0.3"
+    />
+
+    <!-- Arrows container - centered in shield -->
+    <g transform="translate(5, 9)">
+      <!-- Left arrow (Instagram gradient - Reels) - pointing left -->
+      <path
+        d="M6 0L2 2.5L6 5V3.5H7V1.5H6V0Z"
+        fill="url(#instagramGradient)"
+      />
+
+      <!-- Right arrow (Gold - Reps) - pointing right -->
+      <!-- Uses colors.primary #D4A574 -->
+      <path
+        d="M8 0L12 2.5L8 5V3.5H7V1.5H8V0Z"
+        fill="#D4A574"
+      />
+    </g>
+  </g>
+</svg>
