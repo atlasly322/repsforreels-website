@@ -49,11 +49,11 @@
 		},
 		{
 			question: 'Which exercises are supported?',
-			answer: 'Currently, RepsForReels supports pushups, squats, and jumping jacks with real-time AI detection. More exercises are being added regularly based on user feedback.'
+			answer: 'Currently, RepsForReels supports pushups and squats with real-time AI detection. More exercises are being added regularly based on user feedback.'
 		},
 		{
 			question: 'Does it work on both iOS and Android?',
-			answer: 'Yes! RepsForReels is available on both iOS and Android devices. The app uses platform-native screen time APIs for the best possible blocking experience.'
+			answer: 'RepsForReels is currently in early access on Android, with iOS coming very soon. Both versions use platform-native screen time APIs for the best possible blocking experience.'
 		},
 		{
 			question: 'Is my camera data private?',
@@ -97,7 +97,7 @@
 		{
 			icon: 'dumbbell',
 			title: 'Multiple Exercises',
-			description: 'Pushups, squats, jumping jacks, and more exercises coming soon.'
+			description: 'Pushups and squats available now, with more exercises coming soon.'
 		}
 	];
 
