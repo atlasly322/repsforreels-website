@@ -1,0 +1,17 @@
+{
+  "name": "RepsForReels",
+  "short_name": "RepsForReels",
+  "description": "Turn your screen time addiction into gains. Complete exercises to unlock social media.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#00D4AA",
+  "icons": [
+    {
+      "src": "/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

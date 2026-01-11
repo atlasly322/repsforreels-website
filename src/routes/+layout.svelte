@@ -34,10 +34,20 @@
 	<meta name="twitter:image" content="{siteConfig.url}{siteConfig.ogImage}" />
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" type="image/png" sizes="512x512" href="/app-icon.png" />
+	<link rel="icon" type="image/png" sizes="192x192" href="/app-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/app-icon.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/app-icon.png" />
 
 	<!-- Canonical -->
 	<link rel="canonical" href={siteConfig.url} />
+
+	<!-- Web App Manifest -->
+	<link rel="manifest" href="/manifest.json" />
+
+	<!-- Preconnect for performance -->
+	<link rel="preconnect" href="https://randomuser.me" />
+	<link rel="dns-prefetch" href="https://randomuser.me" />
 
 	<!-- Structured Data -->
 	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}

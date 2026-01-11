@@ -501,10 +501,10 @@
 		</p>
 
 		<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-			<a href="#" class="hover:opacity-80 transition-all hover:scale-105 transform">
+			<a href="https://apps.apple.com/app/repsforreels" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-all hover:scale-105 transform">
 				<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto" />
 			</a>
-			<a href="#" class="hover:opacity-80 transition-all hover:scale-105 transform">
+			<a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-all hover:scale-105 transform">
 				<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-[48px] sm:h-[54px] md:h-[60px] w-auto" />
 			</a>
 		</div>
