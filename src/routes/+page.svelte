@@ -342,7 +342,10 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
 			<a href="/" class="flex items-center gap-3">
-				<img src="/app-icon.png" alt="RepsForReels" class="w-10 h-10 rounded-xl" />
+				<picture>
+					<source srcset="/app-icon.webp" type="image/webp" />
+					<img src="/app-icon.png" alt="RepsForReels" width="40" height="40" class="w-10 h-10 rounded-xl" />
+				</picture>
 				<span class="flex items-baseline">
 					<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#D4A574] via-[#E8C4A0] to-[#D4A574] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reps</span>
 					<span class="text-sm font-normal italic text-white/50 mx-0.5">For</span>
@@ -365,6 +368,8 @@
 	</div>
 </nav>
 
+<!-- Main content -->
+<main>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-16 overflow-hidden">
 	<!-- Background gradient orbs -->
@@ -461,10 +466,10 @@
 				<!-- Early adopters social proof -->
 				<div class="mt-10 flex items-center gap-4 justify-center lg:justify-start">
 					<div class="flex -space-x-2">
-						<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Early adopter" class="w-9 h-9 rounded-full border-2 border-background object-cover" />
-						<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Early adopter" class="w-9 h-9 rounded-full border-2 border-background object-cover" />
-						<img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Early adopter" class="w-9 h-9 rounded-full border-2 border-background object-cover" />
-						<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Early adopter" class="w-9 h-9 rounded-full border-2 border-background object-cover" />
+						<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Early adopter" width="36" height="36" class="w-9 h-9 rounded-full border-2 border-background object-cover" loading="lazy" />
+						<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Early adopter" width="36" height="36" class="w-9 h-9 rounded-full border-2 border-background object-cover" loading="lazy" />
+						<img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Early adopter" width="36" height="36" class="w-9 h-9 rounded-full border-2 border-background object-cover" loading="lazy" />
+						<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Early adopter" width="36" height="36" class="w-9 h-9 rounded-full border-2 border-background object-cover" loading="lazy" />
 						<div class="w-9 h-9 rounded-full bg-gradient-to-r from-[#833AB4] to-[#F77737] border-2 border-background flex items-center justify-center text-xs font-bold text-white">+</div>
 					</div>
 					<div class="text-left">
@@ -485,11 +490,17 @@
 						<!-- Inner bezel -->
 						<div class="bg-black rounded-[2.5rem] overflow-hidden relative">
 							<!-- Screen content -->
-							<img
-								src="/app-screenshot.jpg"
-								alt="RepsForReels App Screenshot showing exercise tracking interface"
-								class="w-[280px] sm:w-[300px] h-auto"
-							/>
+							<picture>
+								<source srcset="/app-screenshot.webp" type="image/webp" />
+								<img
+									src="/app-screenshot.jpg"
+									alt="RepsForReels App Screenshot showing exercise tracking interface"
+									width="300"
+									height="652"
+									class="w-[280px] sm:w-[300px] h-auto"
+									fetchpriority="high"
+								/>
+							</picture>
 						</div>
 					</div>
 
@@ -814,7 +825,7 @@
 			{#each testimonials as testimonial}
 				<div class="group bg-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 hover:border-[#DD2A7B]/20 transition-all duration-300">
 					<div class="flex items-center gap-4 mb-6">
-						<img src={testimonial.avatar} alt={testimonial.name} class="w-14 h-14 rounded-full object-cover border-2 border-white/10" />
+						<img src={testimonial.avatar} alt={testimonial.name} width="56" height="56" class="w-14 h-14 rounded-full object-cover border-2 border-white/10" loading="lazy" />
 						<div class="flex-1">
 							<h4 class="font-bold text-white">{testimonial.name}</h4>
 							<p class="text-sm text-text-muted">{testimonial.handle}</p>
@@ -874,7 +885,10 @@
 	<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 		<!-- Logo -->
 		<div class="flex items-center justify-center gap-4 mb-8">
-			<img src="/app-icon.png" alt="RepsForReels" class="w-20 h-20 rounded-2xl" />
+			<picture>
+				<source srcset="/app-icon.webp" type="image/webp" />
+				<img src="/app-icon.png" alt="RepsForReels" width="80" height="80" class="w-20 h-20 rounded-2xl" loading="lazy" />
+			</picture>
 			<span class="flex items-baseline">
 				<span class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-[#D4A574] via-[#E8C4A0] to-[#D4A574] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reps</span>
 				<span class="text-xl font-normal italic text-white/50 mx-1">For</span>
@@ -945,16 +959,17 @@
 		<!-- Platform badges (coming soon) -->
 		<div class="mt-10 flex items-center justify-center gap-6">
 			<div class="flex items-center gap-2 text-text-muted">
-				<img src="/badge-app-store.svg" alt="App Store" class="h-8 opacity-40" />
+				<img src="/badge-app-store.svg" alt="App Store" width="135" height="40" class="h-8 opacity-40" loading="lazy" />
 				<span class="text-sm">Coming Soon</span>
 			</div>
 			<div class="flex items-center gap-2 text-text-muted">
-				<img src="/badge-google-play.svg" alt="Google Play" class="h-8 opacity-40" />
+				<img src="/badge-google-play.svg" alt="Google Play" width="135" height="40" class="h-8 opacity-40" loading="lazy" />
 				<span class="text-sm">Coming Soon</span>
 			</div>
 		</div>
 	</div>
 </section>
+</main>
 
 <!-- Footer -->
 <footer class="py-16 border-t border-white/5 relative z-10">
@@ -963,7 +978,10 @@
 			<!-- Brand -->
 			<div class="md:col-span-2">
 				<a href="/" class="flex items-center gap-3 mb-6">
-					<img src="/app-icon.png" alt="RepsForReels" class="w-12 h-12 rounded-xl" />
+					<picture>
+						<source srcset="/app-icon.webp" type="image/webp" />
+						<img src="/app-icon.png" alt="RepsForReels" width="48" height="48" class="w-12 h-12 rounded-xl" loading="lazy" />
+					</picture>
 					<span class="flex items-baseline">
 						<span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-[#D4A574] via-[#E8C4A0] to-[#D4A574] bg-clip-text text-transparent" style="-webkit-background-clip: text;">Reps</span>
 						<span class="text-base font-normal italic text-white/50 mx-0.5">For</span>
