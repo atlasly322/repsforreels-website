@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-background text-text-primary font-sans antialiased;
+	}
+
+	::selection {
+		@apply bg-accent/30 text-white;
+	}
+}
+
+@layer components {
+	.btn-primary {
+		@apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-background font-semibold rounded-xl transition-all duration-300 hover:bg-accent-dark hover:scale-105 hover:shadow-lg hover:shadow-accent/25;
+	}
+
+	.btn-secondary {
+		@apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface border border-white/10 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-surface-light hover:border-accent/50 hover:scale-105;
+	}
+
+	.card {
+		@apply bg-surface border border-white/5 rounded-2xl p-6 transition-all duration-300 hover:border-accent/20 hover:shadow-lg hover:shadow-accent/5;
+	}
+
+	.gradient-text {
+		@apply bg-gradient-to-r from-accent via-cyan-400 to-accent bg-clip-text text-transparent;
+	}
+
+	.gradient-text-orange {
+		@apply bg-gradient-to-r from-secondary via-orange-400 to-secondary bg-clip-text text-transparent;
+	}
+
+	.section-heading {
+		@apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+	}
+
+	.section-subheading {
+		@apply text-lg md:text-xl text-text-secondary max-w-2xl;
+	}
+
+	/* Glow effects */
+	.glow-accent {
+		box-shadow: 0 0 60px rgba(0, 212, 170, 0.15);
+	}
+
+	.glow-orange {
+		box-shadow: 0 0 60px rgba(255, 107, 53, 0.15);
+	}
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-surface-light rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-muted;
+}
+
+/* Phone mockup styles */
+.phone-mockup {
+	@apply relative;
+	perspective: 1000px;
+}
+
+.phone-mockup::before {
+	content: '';
+	@apply absolute inset-0 bg-gradient-to-b from-accent/20 to-transparent rounded-[40px] blur-3xl -z-10;
+}

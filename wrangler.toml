@@ -1,0 +1,11 @@
+# Cloudflare Pages configuration for RepsForReels website
+# This file is used by @sveltejs/adapter-cloudflare
+
+name = "repsforreels-website"
+compatibility_date = "2025-01-11"
+
+# For Cloudflare Pages, specify the output directory
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+# Optional: Node.js compatibility
+compatibility_flags = ["nodejs_compat"]

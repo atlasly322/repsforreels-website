@@ -1,0 +1,43 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Instagram gradient for shield -->
+    <linearGradient id="shieldGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#833AB4"/>
+      <stop offset="33%" stop-color="#DD2A7B"/>
+      <stop offset="66%" stop-color="#F77737"/>
+      <stop offset="100%" stop-color="#FCAF45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded shield with gradient -->
+  <path
+    d="M256 40
+       C256 40 100 80 100 80
+       C90 82 82 92 82 102
+       L82 240
+       C82 340 150 430 256 472
+       C362 430 430 340 430 240
+       L430 102
+       C430 92 422 82 412 80
+       C412 80 256 40 256 40Z"
+    fill="url(#shieldGradient)"
+    rx="20"
+  />
+
+  <!-- Inner cutout / arrows area -->
+  <g transform="translate(256, 260)">
+    <!-- Left arrow (white) - pointing left -->
+    <path
+      d="M-40 -50 L-80 0 L-40 50 L-40 25 L0 25 L0 -25 L-40 -25 Z"
+      fill="white"
+      opacity="0.95"
+    />
+
+    <!-- Right arrow (white) - pointing right -->
+    <path
+      d="M40 -50 L80 0 L40 50 L40 25 L0 25 L0 -25 L40 -25 Z"
+      fill="white"
+      opacity="0.95"
+    />
+  </g>
+</svg>

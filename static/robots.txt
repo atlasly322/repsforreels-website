@@ -1,0 +1,15 @@
+# RepsForReels Robots.txt
+# https://repsforreels.app
+
+User-agent: *
+Allow: /
+
+# Allow all crawlers to access favicon files
+User-agent: Googlebot-Image
+Allow: /favicon.ico
+Allow: /favicon-*.png
+Allow: /apple-touch-icon.png
+Allow: /app-icon.png
+
+# Sitemap location
+Sitemap: https://repsforreels.app/sitemap.xml
