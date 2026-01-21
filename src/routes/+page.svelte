@@ -459,6 +459,9 @@
 								<Bell class="w-4 h-4" />
 								Be the first to know when we launch. No spam, ever.
 							</p>
+							<p class="text-text-muted text-xs">
+								By joining, you agree to our <a href="/privacy" class="text-[#4ECDC4] hover:underline">Privacy Policy</a>.
+							</p>
 						</form>
 					{/if}
 				</div>
@@ -952,6 +955,9 @@
 					{#if TURNSTILE_SITE_KEY}
 						<div class="turnstile-container"></div>
 					{/if}
+					<p class="text-text-muted text-xs text-center">
+						By joining, you agree to our <a href="/privacy" class="text-[#4ECDC4] hover:underline">Privacy Policy</a>.
+					</p>
 				</form>
 			{/if}
 		</div>
