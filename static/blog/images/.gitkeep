@@ -1,0 +1,19 @@
+# Blog Images Directory
+
+Place blog post hero images and content images here.
+
+## Naming Convention
+- Hero images: `post-slug-hero.webp`
+- Content images: `post-slug-descriptive-name.webp`
+
+## Requirements
+- Format: WebP
+- Hero images: 1200x630px
+- Content images: 800px max width
+- Quality: 80%
+
+## Image List Needed for Current Posts
+
+1. `screen-time-journey-hero.webp` - For "I Cut My Screen Time" post
+2. `best-doomscrolling-apps-hero.webp` - For apps comparison post
+3. `doomscrolling-statistics-hero.webp` - For statistics post

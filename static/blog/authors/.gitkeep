@@ -1,0 +1,11 @@
+# Author Avatars Directory
+
+Place author profile images here.
+
+## Naming Convention
+- Format: `firstname.webp`
+- Size: 200x200px
+- Format: WebP
+
+## Default Fallback
+If no author image is provided, the blog uses DiceBear API to generate an avatar from initials.
