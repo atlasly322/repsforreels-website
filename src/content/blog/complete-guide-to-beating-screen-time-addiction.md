@@ -373,7 +373,7 @@ And if you want a system that turns the problem (phone checking) into a solution
 
 ---
 
-*Found this guide helpful? Share it with someone who might benefit. And reach out on [Twitter](https://x.com/repsforreels) to let me know which strategies work for you.*
+*Found this guide helpful? Share it with someone who might benefit. And reach out on [X](https://x.com/repsforreels) to let me know which strategies work for you.*
 
 ---
 

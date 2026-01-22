@@ -255,7 +255,7 @@ Be part of that second statistic.
 
 ---
 
-*Which statistic surprised you most? Share this article to spread awareness, or reach out on [Twitter](https://x.com/repsforreels).*
+*Which statistic surprised you most? Share this article to spread awareness, or reach out on [X](https://x.com/repsforreels).*
 
 ---
 
