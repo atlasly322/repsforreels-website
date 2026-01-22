@@ -20,8 +20,11 @@ export const load: PageServerLoad = async ({ params }) => {
 		throw error(404, `No posts found for author: ${author}`);
 	}
 
+	// Strip Content component from posts (not serializable)
+	const serializablePosts = posts.map(({ Content, ...post }) => post);
+
 	return {
 		author: authorInfo,
-		posts
+		posts: serializablePosts
 	};
 };
