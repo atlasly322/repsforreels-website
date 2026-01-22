@@ -8,7 +8,10 @@ export type {
 	BlogPostMeta,
 	BlogPost,
 	ProcessedBlogPost,
-	BlogCategory
+	BlogCategory,
+	FAQItem,
+	HowToStep,
+	HowToData
 } from './types';
 
 export { BLOG_CATEGORIES, getCategoryBySlug, getCategorySlug } from './types';
@@ -19,6 +22,9 @@ export {
 	getPostBySlug,
 	getPostsByCategory,
 	getPostsByTag,
+	getPostsByAuthor,
+	getAllAuthors,
+	getAuthorSlug,
 	getFeaturedPosts,
 	getRelatedPosts,
 	getAllTags,
@@ -33,5 +39,9 @@ export {
 export {
 	generateBlogPostSchema,
 	generateBlogListingSchema,
-	generateBreadcrumbSchema
+	generateBreadcrumbSchema,
+	generatePersonSchema,
+	generateFAQSchemaFromContent,
+	generateHowToSchema,
+	generateBlogMetaTags
 } from './seo';

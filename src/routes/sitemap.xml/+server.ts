@@ -1,4 +1,4 @@
-import { getAllPosts, BLOG_CATEGORIES } from '$lib/blog';
+import { getAllPosts, getAllAuthors, BLOG_CATEGORIES } from '$lib/blog';
 import { siteConfig } from '$lib/seo';
 import type { RequestHandler } from './$types';
 
@@ -6,6 +6,7 @@ export const prerender = true;
 
 export const GET: RequestHandler = async () => {
 	const posts = await getAllPosts();
+	const authors = await getAllAuthors();
 
 	// Static pages
 	const staticPages = [
@@ -23,6 +24,13 @@ export const GET: RequestHandler = async () => {
 		changefreq: 'weekly'
 	}));
 
+	// Author pages
+	const authorPages = authors.map((author) => ({
+		url: `/blog/author/${author.slug}`,
+		priority: '0.6',
+		changefreq: 'weekly'
+	}));
+
 	// Blog post pages
 	const blogPages = posts.map((post) => ({
 		url: `/blog/${post.slug}`,
@@ -31,7 +39,7 @@ export const GET: RequestHandler = async () => {
 		lastmod: post.updated || post.date
 	}));
 
-	const allPages = [...staticPages, ...categoryPages, ...blogPages];
+	const allPages = [...staticPages, ...categoryPages, ...authorPages, ...blogPages];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

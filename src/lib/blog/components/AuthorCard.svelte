@@ -10,21 +10,26 @@
 	let { name, title, image, twitter, bio }: Props = $props();
 
 	const defaultImage = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=833AB4`;
+	const authorSlug = name.toLowerCase().replace(/\s+/g, '-');
 </script>
 
 <div class="flex items-start gap-4 p-6 rounded-xl bg-surface/50 border border-white/5 backdrop-blur-sm">
 	<!-- Avatar -->
-	<img
-		src={image || defaultImage}
-		alt={name}
-		class="w-14 h-14 rounded-full object-cover ring-2 ring-[#833AB4]/20"
-		loading="lazy"
-	/>
+	<a href="/blog/author/{authorSlug}">
+		<img
+			src={image || defaultImage}
+			alt={name}
+			class="w-14 h-14 rounded-full object-cover ring-2 ring-[#833AB4]/20 hover:ring-[#FCAF45]/50 transition-all"
+			loading="lazy"
+		/>
+	</a>
 
 	<!-- Info -->
 	<div class="flex-1 min-w-0">
 		<div class="flex items-center gap-2 flex-wrap">
-			<h4 class="font-semibold text-text-primary">{name}</h4>
+			<a href="/blog/author/{authorSlug}" class="hover:text-[#FCAF45] transition-colors">
+				<h4 class="font-semibold text-text-primary">{name}</h4>
+			</a>
 			{#if twitter}
 				<a
 					href="https://x.com/{twitter.replace('@', '')}"
@@ -47,5 +52,15 @@
 		{#if bio}
 			<p class="text-sm text-text-secondary mt-2 line-clamp-2">{bio}</p>
 		{/if}
+
+		<a
+			href="/blog/author/{authorSlug}"
+			class="inline-flex items-center gap-1 text-sm text-[#FCAF45] hover:text-[#F77737] transition-colors mt-2"
+		>
+			View all posts
+			<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+			</svg>
+		</a>
 	</div>
 </div>

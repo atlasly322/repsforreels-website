@@ -70,6 +70,77 @@ export async function getPostsByTag(tag: string): Promise<ProcessedBlogPost[]> {
 }
 
 /**
+ * Get posts by author
+ */
+export async function getPostsByAuthor(authorName: string): Promise<ProcessedBlogPost[]> {
+	const posts = await getAllPosts();
+	return posts.filter(
+		(post) => post.author.toLowerCase().replace(/\s+/g, '-') === authorName.toLowerCase()
+	);
+}
+
+/**
+ * Get author slug from name
+ */
+export function getAuthorSlug(name: string): string {
+	return name.toLowerCase().replace(/\s+/g, '-');
+}
+
+/**
+ * Get unique authors with their info
+ */
+export async function getAllAuthors(): Promise<
+	{
+		name: string;
+		slug: string;
+		title?: string;
+		image?: string;
+		twitter?: string;
+		bio?: string;
+		postCount: number;
+	}[]
+> {
+	const posts = await getAllPosts();
+	const authorMap = new Map<
+		string,
+		{
+			name: string;
+			title?: string;
+			image?: string;
+			twitter?: string;
+			bio?: string;
+			postCount: number;
+		}
+	>();
+
+	posts.forEach((post) => {
+		const existing = authorMap.get(post.author);
+		if (existing) {
+			existing.postCount++;
+			// Update with any new info
+			if (post.authorTitle && !existing.title) existing.title = post.authorTitle;
+			if (post.authorImage && !existing.image) existing.image = post.authorImage;
+			if (post.authorTwitter && !existing.twitter) existing.twitter = post.authorTwitter;
+			if (post.authorBio && !existing.bio) existing.bio = post.authorBio;
+		} else {
+			authorMap.set(post.author, {
+				name: post.author,
+				title: post.authorTitle,
+				image: post.authorImage,
+				twitter: post.authorTwitter,
+				bio: post.authorBio,
+				postCount: 1
+			});
+		}
+	});
+
+	return Array.from(authorMap.values()).map((author) => ({
+		...author,
+		slug: getAuthorSlug(author.name)
+	}));
+}
+
+/**
  * Get featured posts
  */
 export async function getFeaturedPosts(limit: number = 3): Promise<ProcessedBlogPost[]> {

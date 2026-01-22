@@ -6,6 +6,7 @@ author: "Aman Verma"
 authorTitle: "Founder, RepsForReels"
 authorImage: "/blog/authors/aman.webp"
 authorTwitter: "@repsforreels"
+authorBio: "Founder of RepsForReels, building tools to help people reclaim their time from screens through exercise. Previously struggled with 9+ hours of daily screen time."
 category: "Digital Wellness"
 tags: ["screen time addiction", "phone addiction", "digital wellness", "doomscrolling", "mental health"]
 image: "/blog/images/complete-guide-screen-time-hero.webp"
@@ -14,6 +15,19 @@ readTime: 18
 wordCount: 4200
 featured: true
 pinned: true
+faq:
+  - question: "How much screen time is too much?"
+    answer: "While there's no universal threshold, research suggests that more than 4 hours of recreational screen time per day is associated with negative mental health outcomes. However, quality matters more than quantity — mindless scrolling is more harmful than intentional use for learning or connection."
+  - question: "Is screen time addiction a real addiction?"
+    answer: "Yes. While not officially classified in the DSM-5, screen time addiction activates the same dopamine pathways as gambling and substance addictions. Studies show it causes similar withdrawal symptoms, tolerance building, and negative life impacts as recognized addictions."
+  - question: "How long does it take to break a phone addiction?"
+    answer: "Most people see significant improvement within 2-4 weeks of consistent effort. The first week is hardest as your brain adjusts to lower stimulation. Full habit rewiring typically takes 66 days on average, but you'll notice benefits much sooner."
+  - question: "What are the symptoms of screen time addiction?"
+    answer: "Common symptoms include: inability to reduce usage despite wanting to, feeling anxious without your phone, neglecting responsibilities or relationships for screen time, losing track of time while scrolling, using your phone to escape negative emotions, and experiencing withdrawal symptoms like irritability when unable to use devices."
+  - question: "Can screen time addiction cause depression?"
+    answer: "Research shows a strong correlation between excessive screen time and depression, especially among teens and young adults. Heavy social media use is linked to 40% higher rates of depression. However, it can be bidirectional — people may also use screens to cope with existing depression."
+  - question: "What's the best app to reduce screen time?"
+    answer: "The best app depends on your needs. For gamified approaches, RepsForReels turns screen time into exercise motivation. For hard blocking, Opal is highly effective. For mindful pauses, One Sec adds friction before opening apps. Many people benefit from combining multiple approaches."
 ---
 
 Screen time addiction has become the defining behavioral challenge of our generation.

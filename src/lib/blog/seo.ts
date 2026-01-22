@@ -161,6 +161,42 @@ export function generateHowToSchema(
 }
 
 /**
+ * Generate Person schema for author pages
+ */
+export function generatePersonSchema(author: {
+	name: string;
+	slug: string;
+	title?: string;
+	image?: string;
+	twitter?: string;
+	bio?: string;
+}): Record<string, unknown> {
+	const sameAs: string[] = [];
+	if (author.twitter) {
+		sameAs.push(`https://x.com/${author.twitter.replace('@', '')}`);
+	}
+
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		'@id': `${siteConfig.url}/blog/author/${author.slug}#person`,
+		name: author.name,
+		url: `${siteConfig.url}/blog/author/${author.slug}`,
+		...(author.title && { jobTitle: author.title }),
+		...(author.image && {
+			image: author.image.startsWith('http') ? author.image : `${siteConfig.url}${author.image}`
+		}),
+		...(author.bio && { description: author.bio }),
+		...(sameAs.length > 0 && { sameAs }),
+		worksFor: {
+			'@type': 'Organization',
+			'@id': `${siteConfig.url}/#organization`,
+			name: siteConfig.name
+		}
+	};
+}
+
+/**
  * Generate meta tags object for blog post
  */
 export function generateBlogMetaTags(post: ProcessedBlogPost) {

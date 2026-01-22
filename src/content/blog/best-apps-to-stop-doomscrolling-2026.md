@@ -6,6 +6,7 @@ author: "Aman Verma"
 authorTitle: "Founder, RepsForReels"
 authorImage: "/blog/authors/aman.webp"
 authorTwitter: "@repsforreels"
+authorBio: "Founder of RepsForReels, building tools to help people reclaim their time from screens through exercise. Previously struggled with 9+ hours of daily screen time."
 category: "Tips & Guides"
 tags: ["apps", "doomscrolling", "screen time apps", "app comparison", "digital wellness"]
 image: "/blog/images/best-doomscrolling-apps-hero.webp"

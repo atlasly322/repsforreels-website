@@ -1,7 +1,13 @@
 <script lang="ts">
 	import { siteConfig } from '$lib/seo';
 	import { formatDate, getRelatedPosts, getCategorySlug } from '$lib/blog';
-	import { generateBlogPostSchema, generateBreadcrumbSchema, generateBlogMetaTags } from '$lib/blog/seo';
+	import {
+		generateBlogPostSchema,
+		generateBreadcrumbSchema,
+		generateBlogMetaTags,
+		generateFAQSchemaFromContent,
+		generateHowToSchema
+	} from '$lib/blog/seo';
 	import {
 		TableOfContents,
 		ShareButtons,
@@ -23,6 +29,21 @@
 		{ name: 'Blog', url: `${siteConfig.url}/blog` },
 		{ name: data.post.title, url: `${siteConfig.url}/blog/${data.post.slug}` }
 	]);
+
+	// Generate FAQ schema if post has FAQ data
+	const faqSchema = data.post.faq?.length
+		? generateFAQSchemaFromContent(data.post.faq)
+		: null;
+
+	// Generate HowTo schema if post has HowTo data
+	const howToSchema = data.post.howTo?.steps?.length
+		? generateHowToSchema(
+				data.post.title,
+				data.post.description,
+				data.post.howTo.steps,
+				data.post.howTo.totalTime
+			)
+		: null;
 
 	let relatedPosts = $state<ProcessedBlogPost[]>([]);
 
@@ -73,6 +94,12 @@
 
 	{@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
+	{#if faqSchema}
+		{@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+	{/if}
+	{#if howToSchema}
+		{@html `<script type="application/ld+json">${JSON.stringify(howToSchema)}</script>`}
+	{/if}
 </svelte:head>
 
 <main class="min-h-screen bg-background">
@@ -220,6 +247,7 @@
 						title={data.post.authorTitle}
 						image={data.post.authorImage}
 						twitter={data.post.authorTwitter}
+						bio={data.post.authorBio}
 					/>
 				</div>
 

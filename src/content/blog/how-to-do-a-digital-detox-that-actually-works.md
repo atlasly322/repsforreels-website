@@ -6,6 +6,7 @@ author: "Aman Verma"
 authorTitle: "Founder, RepsForReels"
 authorImage: "/blog/authors/aman.webp"
 authorTwitter: "@repsforreels"
+authorBio: "Founder of RepsForReels, building tools to help people reclaim their time from screens through exercise. Previously struggled with 9+ hours of daily screen time."
 category: "Tips & Guides"
 tags: ["digital detox", "screen time", "phone addiction", "wellness", "productivity", "mental health"]
 image: "/blog/images/digital-detox-guide-hero.webp"
@@ -13,6 +14,34 @@ imageAlt: "Person enjoying nature without phone, representing digital detox free
 readTime: 14
 wordCount: 3100
 featured: false
+faq:
+  - question: "How long should a digital detox last?"
+    answer: "A minimum of 24-48 hours is needed to feel initial benefits, but 1-2 weeks produces the best results for resetting your dopamine system and breaking habits. For ongoing wellness, incorporate regular phone-free periods (mornings, evenings, one day per week) rather than relying on occasional long detoxes."
+  - question: "What are the benefits of a digital detox?"
+    answer: "Benefits include improved sleep quality, reduced anxiety and stress, better concentration and focus, more meaningful in-person relationships, increased productivity, improved mood, and a restored sense of control over your time and attention."
+  - question: "What are digital detox withdrawal symptoms?"
+    answer: "Common withdrawal symptoms include anxiety, irritability, FOMO (fear of missing out), boredom, restlessness, difficulty concentrating, and phantom phone vibrations. These typically peak on days 2-3 and significantly improve by day 5-7."
+  - question: "Can I do a digital detox while working?"
+    answer: "Yes. A 'focused detox' targets only problematic apps (social media, games) while keeping work tools. Set specific times for email, use your laptop for work communication, and keep your phone in another room. Many people find their work productivity actually improves."
+  - question: "How do I not get bored during a digital detox?"
+    answer: "Preparation is key. Before starting, plan specific alternative activities: books to read, hobbies to try, people to meet, places to visit, projects to complete. The boredom you feel is actually your brain resetting — it passes and transforms into creativity and presence."
+howTo:
+  totalTime: "P14D"
+  steps:
+    - name: "Track your current usage"
+      text: "For one week before your detox, check your screen time stats daily. Note your top apps, peak usage times, and emotional triggers. This data helps you understand your patterns and measure progress."
+    - name: "Define your why and choose your detox type"
+      text: "Write down specifically why you want to detox (e.g., 'be present with my kids' not 'use phone less'). Choose between a mini detox (24-48 hours), focused detox (1-2 weeks eliminating specific apps), or deep detox (2-4 weeks minimal use)."
+    - name: "Plan your alternative activities"
+      text: "For every trigger moment (morning in bed, waiting in line, evening on couch), write down a specific replacement activity. 'Do something else' is not a plan — '10 pushups' or 'read 5 pages' is a plan."
+    - name: "Set up your environment for success"
+      text: "Delete or hide problematic apps, enable grayscale mode, buy a physical alarm clock, create a phone charging station outside your bedroom, and put books or other activities where your phone used to be."
+    - name: "Tell people and start your detox"
+      text: "Inform friends and family you'll be less responsive. Start on a day when you have engaging activities planned. The first 24-72 hours are hardest — stay busy and ride out the discomfort."
+    - name: "Navigate the withdrawal period (Days 2-7)"
+      text: "Expect irritability, restlessness, and strong urges. When urges hit, wait 10-15 minutes — they pass. Exercise helps tremendously. Journal what you notice. Don't fill the void with other screens."
+    - name: "Create your re-entry rules"
+      text: "Before your detox ends, establish specific rules for ongoing use: time-based (no phone before 8 AM), location-based (no phone at dinner), or behavior-based (10 pushups before Instagram). Pick 2-3 rules to start."
 ---
 
 "I need a digital detox."

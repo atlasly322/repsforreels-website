@@ -3,6 +3,22 @@
  * Comprehensive type definitions for SEO-optimized blog posts
  */
 
+export interface FAQItem {
+	question: string;
+	answer: string;
+}
+
+export interface HowToStep {
+	name: string;
+	text: string;
+	image?: string;
+}
+
+export interface HowToData {
+	totalTime?: string; // ISO 8601 duration, e.g., "PT2H" for 2 hours
+	steps: HowToStep[];
+}
+
 export interface BlogPostMeta {
 	// Core metadata
 	title: string;
@@ -18,6 +34,7 @@ export interface BlogPostMeta {
 	authorTitle?: string;
 	authorImage?: string;
 	authorTwitter?: string;
+	authorBio?: string;
 
 	// Categorization
 	category: BlogCategory;
@@ -43,6 +60,10 @@ export interface BlogPostMeta {
 
 	// Related content
 	relatedPosts?: string[]; // slugs of related posts
+
+	// Rich snippets data
+	faq?: FAQItem[];
+	howTo?: HowToData;
 }
 
 export interface BlogPost extends BlogPostMeta {

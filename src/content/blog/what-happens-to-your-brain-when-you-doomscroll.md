@@ -6,6 +6,7 @@ author: "Aman Verma"
 authorTitle: "Founder, RepsForReels"
 authorImage: "/blog/authors/aman.webp"
 authorTwitter: "@repsforreels"
+authorBio: "Founder of RepsForReels, building tools to help people reclaim their time from screens through exercise. Previously struggled with 9+ hours of daily screen time."
 category: "Research & Studies"
 tags: ["neuroscience", "doomscrolling", "brain health", "dopamine", "mental health", "psychology"]
 image: "/blog/images/brain-doomscrolling-hero.webp"
