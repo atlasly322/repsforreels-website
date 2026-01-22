@@ -1011,6 +1011,7 @@
 					<li><a href="#how-it-works" class="text-text-secondary hover:text-white transition-colors">How it Works</a></li>
 					<li><a href="#testimonials" class="text-text-secondary hover:text-white transition-colors">Reviews</a></li>
 					<li><a href="#faq" class="text-text-secondary hover:text-white transition-colors">FAQ</a></li>
+					<li><a href="/blog" class="text-text-secondary hover:text-white transition-colors">Blog</a></li>
 				</ul>
 			</div>
 

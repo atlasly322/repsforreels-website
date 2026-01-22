@@ -2,6 +2,12 @@
 	import { onMount } from 'svelte';
 	import { List } from 'lucide-svelte';
 
+	interface Props {
+		variant?: 'mobile' | 'desktop' | 'auto';
+	}
+
+	let { variant = 'auto' }: Props = $props();
+
 	interface Heading {
 		id: string;
 		text: string;
@@ -64,7 +70,8 @@
 
 {#if headings.length > 2}
 	<!-- Mobile: Collapsible -->
-	<div class="lg:hidden mb-6">
+	{#if variant === 'mobile' || variant === 'auto'}
+	<div class="mb-6 {variant === 'auto' ? 'lg:hidden' : ''}">
 		<button
 			onclick={() => (isOpen = !isOpen)}
 			class="flex items-center gap-2 w-full p-4 rounded-xl bg-surface/50 border border-white/5 text-left backdrop-blur-sm"
@@ -96,10 +103,12 @@
 			</nav>
 		{/if}
 	</div>
+	{/if}
 
 	<!-- Desktop: Sticky sidebar -->
+	{#if variant === 'desktop' || variant === 'auto'}
 	<nav
-		class="hidden lg:block sticky top-24 p-5 rounded-xl bg-surface/50 border border-white/5 max-h-[calc(100vh-8rem)] overflow-y-auto backdrop-blur-sm"
+		class="sticky top-24 p-5 rounded-xl bg-surface/50 border border-white/5 max-h-[calc(100vh-8rem)] overflow-y-auto backdrop-blur-sm {variant === 'auto' ? 'hidden lg:block' : ''}"
 	>
 		<h4 class="flex items-center gap-2 font-semibold text-text-primary mb-4">
 			<List class="w-5 h-5 text-[#FCAF45]" />
@@ -121,4 +130,5 @@
 			{/each}
 		</ul>
 	</nav>
+	{/if}
 {/if}

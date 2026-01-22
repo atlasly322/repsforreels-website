@@ -170,7 +170,7 @@
 			<!-- Main Content -->
 			<div>
 				<!-- Table of Contents (Mobile) -->
-				<TableOfContents />
+				<TableOfContents variant="mobile" />
 
 				<!-- Article -->
 				<article
@@ -237,7 +237,7 @@
 			<!-- Sidebar (Desktop) -->
 			<aside class="hidden lg:block">
 				<div class="sticky top-24 space-y-8">
-					<TableOfContents />
+					<TableOfContents variant="desktop" />
 
 					<!-- CTA Card -->
 					<div class="p-6 rounded-xl bg-gradient-to-br from-[#833AB4]/10 via-[#DD2A7B]/10 to-[#F77737]/10 border border-white/5">
