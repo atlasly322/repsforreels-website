@@ -356,7 +356,7 @@
 				<a href="#about" class="text-text-secondary hover:text-white transition-colors text-sm">About</a>
 				<a href="#features" class="text-text-secondary hover:text-white transition-colors text-sm">Features</a>
 				<a href="#how-it-works" class="text-text-secondary hover:text-white transition-colors text-sm">How it Works</a>
-				<a href="#testimonials" class="text-text-secondary hover:text-white transition-colors text-sm">Reviews</a>
+				<a href="/blog" class="text-text-secondary hover:text-white transition-colors text-sm">Blog</a>
 				<a href="#faq" class="text-text-secondary hover:text-white transition-colors text-sm">FAQ</a>
 			</div>
 			<a href="#download" class="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden">

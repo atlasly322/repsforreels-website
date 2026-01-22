@@ -11,15 +11,15 @@
 
 	let { name, title, image, twitter, bio }: Props = $props();
 
-	const defaultImage = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=4ECDC4`;
+	const defaultImage = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=833AB4`;
 </script>
 
-<div class="flex items-start gap-4 p-6 rounded-xl bg-surface-elevated border border-border">
+<div class="flex items-start gap-4 p-6 rounded-xl bg-surface/50 border border-white/5 backdrop-blur-sm">
 	<!-- Avatar -->
 	<img
 		src={image || defaultImage}
 		alt={name}
-		class="w-14 h-14 rounded-full object-cover ring-2 ring-teal/20"
+		class="w-14 h-14 rounded-full object-cover ring-2 ring-[#833AB4]/20"
 		loading="lazy"
 	/>
 
@@ -32,7 +32,7 @@
 					href="https://twitter.com/{twitter.replace('@', '')}"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-text-muted hover:text-teal transition-colors"
+					class="text-text-muted hover:text-[#FCAF45] transition-colors"
 					aria-label="Follow {name} on Twitter"
 				>
 					<Twitter class="w-4 h-4" />
@@ -41,7 +41,7 @@
 		</div>
 
 		{#if title}
-			<p class="text-sm text-teal">{title}</p>
+			<p class="text-sm bg-gradient-to-r from-[#833AB4] to-[#FCAF45] bg-clip-text text-transparent">{title}</p>
 		{/if}
 
 		{#if bio}

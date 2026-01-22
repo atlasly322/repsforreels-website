@@ -8,6 +8,21 @@ export default {
 				background: '#0A0A0F',
 				surface: '#16161F',
 				'surface-light': '#1E1E2A',
+				border: 'rgba(255, 255, 255, 0.05)',
+
+				// Instagram-style gradient colors (primary brand)
+				'ig-purple': '#833AB4',
+				'ig-pink': '#DD2A7B',
+				'ig-orange': '#F77737',
+				'ig-yellow': '#FCAF45',
+
+				// Accent colors
+				teal: '#4ECDC4',
+				'teal-dim': '#3DBDB5',
+				coral: '#FF6B6B',
+				green: '#8DD04A',
+
+				// Legacy
 				accent: '#00D4AA',
 				'accent-dark': '#00B894',
 				secondary: '#FF6B35',
@@ -15,6 +30,7 @@ export default {
 				muted: '#6B7280',
 				'text-primary': '#FFFFFF',
 				'text-secondary': '#A0A0A0',
+				'text-muted': '#6B7280',
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

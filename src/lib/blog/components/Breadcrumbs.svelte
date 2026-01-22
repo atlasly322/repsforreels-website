@@ -19,7 +19,7 @@
 		<li>
 			<a
 				href="/"
-				class="flex items-center gap-1 text-text-muted hover:text-teal transition-colors"
+				class="flex items-center gap-1 text-text-muted hover:text-[#FCAF45] transition-colors"
 				aria-label="Home"
 			>
 				<Home class="w-4 h-4" />
@@ -31,7 +31,7 @@
 				<ChevronRight class="w-4 h-4 text-text-muted" />
 
 				{#if item.href && index < items.length - 1}
-					<a href={item.href} class="text-text-muted hover:text-teal transition-colors">
+					<a href={item.href} class="text-text-muted hover:text-[#FCAF45] transition-colors">
 						{item.name}
 					</a>
 				{:else}

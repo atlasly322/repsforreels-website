@@ -29,7 +29,7 @@ Here's what I found.
 
 | App | Best For | Price | Effectiveness | Our Rating |
 |-----|----------|-------|---------------|------------|
-| RepsForReels | Exercise-based blocking | Free / $9.99/mo | ★★★★★ | 9.5/10 |
+| RepsForReels | Exercise-based blocking | Free / $4.99/mo | ★★★★★ | 9.5/10 |
 | Opal | Hard app blocking | $8.29/mo | ★★★★☆ | 8.5/10 |
 | One Sec | Breathing pause | Free / $4.99/mo | ★★★★☆ | 8/10 |
 | Freedom | Multi-device blocking | $8.99/mo | ★★★★☆ | 8/10 |
@@ -47,7 +47,7 @@ Now let's dive deep into each one.
 
 ## 1. RepsForReels — Best Overall (Exercise-Based)
 
-**Price:** Free with premium at $9.99/month
+**Price:** Free tier / Pro from $4.99/month
 **Platforms:** iOS, Android
 **Our Rating:** 9.5/10
 

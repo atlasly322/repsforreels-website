@@ -67,9 +67,9 @@
 	<div class="lg:hidden mb-6">
 		<button
 			onclick={() => (isOpen = !isOpen)}
-			class="flex items-center gap-2 w-full p-4 rounded-xl bg-surface border border-border text-left"
+			class="flex items-center gap-2 w-full p-4 rounded-xl bg-surface/50 border border-white/5 text-left backdrop-blur-sm"
 		>
-			<List class="w-5 h-5 text-teal" />
+			<List class="w-5 h-5 text-[#FCAF45]" />
 			<span class="font-medium text-text-primary">Table of Contents</span>
 			<span
 				class="ml-auto transform transition-transform {isOpen ? 'rotate-180' : ''} text-text-muted"
@@ -78,14 +78,14 @@
 		</button>
 
 		{#if isOpen}
-			<nav class="mt-2 p-4 rounded-xl bg-surface border border-border">
+			<nav class="mt-2 p-4 rounded-xl bg-surface/50 border border-white/5 backdrop-blur-sm">
 				<ul class="space-y-2">
 					{#each headings as heading}
 						<li style="padding-left: {(heading.level - 2) * 12}px">
 							<button
 								onclick={() => scrollToHeading(heading.id)}
 								class="text-left text-sm w-full py-1 {activeId === heading.id
-									? 'text-teal font-medium'
+									? 'bg-gradient-to-r from-[#833AB4] to-[#FCAF45] bg-clip-text text-transparent font-medium'
 									: 'text-text-secondary hover:text-text-primary'} transition-colors"
 							>
 								{heading.text}
@@ -99,10 +99,10 @@
 
 	<!-- Desktop: Sticky sidebar -->
 	<nav
-		class="hidden lg:block sticky top-24 p-5 rounded-xl bg-surface border border-border max-h-[calc(100vh-8rem)] overflow-y-auto"
+		class="hidden lg:block sticky top-24 p-5 rounded-xl bg-surface/50 border border-white/5 max-h-[calc(100vh-8rem)] overflow-y-auto backdrop-blur-sm"
 	>
 		<h4 class="flex items-center gap-2 font-semibold text-text-primary mb-4">
-			<List class="w-5 h-5 text-teal" />
+			<List class="w-5 h-5 text-[#FCAF45]" />
 			On this page
 		</h4>
 
@@ -112,8 +112,8 @@
 					<button
 						onclick={() => scrollToHeading(heading.id)}
 						class="text-left text-sm w-full py-1 border-l-2 pl-3 {activeId === heading.id
-							? 'text-teal font-medium border-teal'
-							: 'text-text-secondary hover:text-text-primary border-transparent hover:border-text-muted'} transition-all"
+							? 'bg-gradient-to-r from-[#833AB4] to-[#FCAF45] bg-clip-text text-transparent font-medium border-[#833AB4]'
+							: 'text-text-secondary hover:text-text-primary border-transparent hover:border-white/20'} transition-all"
 					>
 						{heading.text}
 					</button>

@@ -45,7 +45,7 @@
 
 	<button
 		onclick={() => openShare('twitter')}
-		class="p-2 rounded-lg bg-surface hover:bg-surface-elevated border border-border hover:border-[#1DA1F2] text-text-secondary hover:text-[#1DA1F2] transition-all"
+		class="p-2 rounded-lg bg-surface/50 border border-white/5 text-text-secondary hover:border-[#1DA1F2]/50 hover:text-[#1DA1F2] transition-all backdrop-blur-sm"
 		aria-label="Share on Twitter"
 	>
 		<Twitter class="w-4 h-4" />
@@ -53,7 +53,7 @@
 
 	<button
 		onclick={() => openShare('facebook')}
-		class="p-2 rounded-lg bg-surface hover:bg-surface-elevated border border-border hover:border-[#4267B2] text-text-secondary hover:text-[#4267B2] transition-all"
+		class="p-2 rounded-lg bg-surface/50 border border-white/5 text-text-secondary hover:border-[#4267B2]/50 hover:text-[#4267B2] transition-all backdrop-blur-sm"
 		aria-label="Share on Facebook"
 	>
 		<Facebook class="w-4 h-4" />
@@ -61,7 +61,7 @@
 
 	<button
 		onclick={() => openShare('linkedin')}
-		class="p-2 rounded-lg bg-surface hover:bg-surface-elevated border border-border hover:border-[#0A66C2] text-text-secondary hover:text-[#0A66C2] transition-all"
+		class="p-2 rounded-lg bg-surface/50 border border-white/5 text-text-secondary hover:border-[#0A66C2]/50 hover:text-[#0A66C2] transition-all backdrop-blur-sm"
 		aria-label="Share on LinkedIn"
 	>
 		<Linkedin class="w-4 h-4" />
@@ -69,11 +69,11 @@
 
 	<button
 		onclick={copyLink}
-		class="p-2 rounded-lg bg-surface hover:bg-surface-elevated border border-border hover:border-teal text-text-secondary hover:text-teal transition-all"
+		class="p-2 rounded-lg bg-surface/50 border border-white/5 text-text-secondary hover:border-[#833AB4]/50 hover:text-[#FCAF45] transition-all backdrop-blur-sm"
 		aria-label="Copy link"
 	>
 		{#if copied}
-			<Check class="w-4 h-4 text-success" />
+			<Check class="w-4 h-4 text-[#8DD04A]" />
 		{:else}
 			<Link2 class="w-4 h-4" />
 		{/if}

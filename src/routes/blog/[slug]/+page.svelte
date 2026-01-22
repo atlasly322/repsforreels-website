@@ -10,7 +10,7 @@
 		NewsletterCTA,
 		Breadcrumbs
 	} from '$lib/blog/components';
-	import { Clock, Calendar, Tag, ArrowLeft } from 'lucide-svelte';
+	import { Clock, Calendar, Tag, ArrowLeft, Sparkles } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import type { ProcessedBlogPost } from '$lib/blog/types';
 
@@ -77,8 +77,12 @@
 
 <main class="min-h-screen bg-background">
 	<!-- Hero -->
-	<section class="relative pt-8 pb-12 md:pt-12 md:pb-16">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6">
+	<section class="relative pt-8 pb-12 md:pt-12 md:pb-16 overflow-hidden">
+		<!-- Background gradient orbs - Instagram colors -->
+		<div class="absolute top-0 left-1/4 w-96 h-96 bg-[#833AB4]/10 rounded-full blur-3xl -translate-y-1/2"></div>
+		<div class="absolute bottom-0 right-1/4 w-72 h-72 bg-[#F77737]/10 rounded-full blur-3xl translate-y-1/2"></div>
+
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
 			<!-- Breadcrumbs -->
 			<Breadcrumbs
 				items={[
@@ -91,7 +95,7 @@
 			<!-- Back link -->
 			<a
 				href="/blog"
-				class="inline-flex items-center gap-2 text-text-muted hover:text-teal transition-colors mb-8"
+				class="inline-flex items-center gap-2 text-text-muted hover:text-[#FCAF45] transition-colors mb-8"
 			>
 				<ArrowLeft class="w-4 h-4" />
 				Back to Blog
@@ -101,9 +105,10 @@
 			<div class="mb-4">
 				<a
 					href="/blog/category/{getCategorySlug(data.post.category)}"
-					class="inline-block px-3 py-1 rounded-full bg-teal/10 text-teal text-sm font-medium hover:bg-teal/20 transition-colors"
+					class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm font-medium backdrop-blur-sm"
 				>
-					{data.post.category}
+					<Sparkles class="w-3 h-3 text-[#FCAF45]" />
+					<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent">{data.post.category}</span>
 				</a>
 			</div>
 
@@ -117,21 +122,21 @@
 				<div class="flex items-center gap-2">
 					<img
 						src={data.post.authorImage ||
-							`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(data.post.author)}&backgroundColor=4ECDC4`}
+							`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(data.post.author)}&backgroundColor=833AB4`}
 						alt={data.post.author}
 						class="w-8 h-8 rounded-full"
 					/>
 					<span class="text-text-primary font-medium">{data.post.author}</span>
 				</div>
 
-				<span class="hidden sm:block text-border">•</span>
+				<span class="hidden sm:block text-white/10">•</span>
 
 				<div class="flex items-center gap-1">
 					<Calendar class="w-4 h-4" />
 					<time datetime={data.post.date}>{formatDate(data.post.date)}</time>
 				</div>
 
-				<span class="hidden sm:block text-border">•</span>
+				<span class="hidden sm:block text-white/10">•</span>
 
 				<div class="flex items-center gap-1">
 					<Clock class="w-4 h-4" />
@@ -174,28 +179,31 @@
 						prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
 						prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
 						prose-p:text-text-secondary prose-p:leading-relaxed
-						prose-a:text-teal prose-a:no-underline hover:prose-a:underline
+						prose-a:text-[#FCAF45] prose-a:no-underline hover:prose-a:underline hover:prose-a:text-[#F77737]
 						prose-strong:text-text-primary prose-strong:font-semibold
-						prose-blockquote:border-l-teal prose-blockquote:bg-surface prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-						prose-code:text-coral prose-code:bg-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
-						prose-pre:bg-surface prose-pre:border prose-pre:border-border prose-pre:rounded-xl
+						prose-blockquote:border-l-[#833AB4] prose-blockquote:bg-surface/50 prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
+						prose-code:text-[#F77737] prose-code:bg-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+						prose-pre:bg-surface prose-pre:border prose-pre:border-white/5 prose-pre:rounded-xl
 						prose-img:rounded-xl prose-img:shadow-lg
 						prose-ul:text-text-secondary prose-ol:text-text-secondary
-						prose-li:marker:text-teal
-						prose-hr:border-border"
+						prose-li:marker:text-[#833AB4]
+						prose-hr:border-white/10
+						prose-table:text-text-secondary
+						prose-th:text-text-primary prose-th:bg-surface/50 prose-th:px-4 prose-th:py-2
+						prose-td:px-4 prose-td:py-2 prose-td:border-white/5"
 				>
 					<data.post.Content />
 				</article>
 
 				<!-- Tags -->
 				{#if data.post.tags.length > 0}
-					<div class="mt-12 pt-8 border-t border-border">
+					<div class="mt-12 pt-8 border-t border-white/10">
 						<div class="flex items-center gap-2 flex-wrap">
 							<Tag class="w-4 h-4 text-text-muted" />
 							{#each data.post.tags as tag}
 								<a
 									href="/blog/tag/{tag.toLowerCase().replace(/\s+/g, '-')}"
-									class="px-3 py-1 rounded-full bg-surface border border-border text-sm text-text-secondary hover:border-teal/30 hover:text-teal transition-all"
+									class="px-3 py-1 rounded-full bg-surface/50 border border-white/5 text-sm text-text-secondary hover:border-[#833AB4]/30 hover:text-[#FCAF45] transition-all"
 								>
 									#{tag}
 								</a>
@@ -216,7 +224,7 @@
 				</div>
 
 				<!-- Share (Bottom) -->
-				<div class="mt-12 p-6 rounded-xl bg-surface border border-border">
+				<div class="mt-12 p-6 rounded-xl bg-surface/50 border border-white/5">
 					<p class="text-text-primary font-medium mb-4">Found this helpful? Share it!</p>
 					<ShareButtons
 						url="{siteConfig.url}/blog/{data.post.slug}"
@@ -232,16 +240,17 @@
 					<TableOfContents />
 
 					<!-- CTA Card -->
-					<div class="p-6 rounded-xl bg-gradient-to-br from-teal/10 to-coral/10 border border-border">
+					<div class="p-6 rounded-xl bg-gradient-to-br from-[#833AB4]/10 via-[#DD2A7B]/10 to-[#F77737]/10 border border-white/5">
 						<h4 class="font-bold text-text-primary mb-2">Ready to take control?</h4>
 						<p class="text-sm text-text-secondary mb-4">
 							Turn your screen time into workout time with RepsForReels.
 						</p>
 						<a
 							href="/"
-							class="block w-full py-2 px-4 rounded-lg bg-teal text-background text-center font-semibold hover:bg-teal-dim transition-colors"
+							class="block w-full py-2 px-4 rounded-lg text-center font-semibold relative overflow-hidden"
 						>
-							Get Started Free
+							<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45]"></div>
+							<span class="relative text-white">Get Started Free</span>
 						</a>
 					</div>
 				</div>
