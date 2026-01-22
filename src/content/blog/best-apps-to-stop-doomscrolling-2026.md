@@ -408,7 +408,7 @@ Don't let that be you.
 
 ---
 
-**Which app have you tried? What worked for you? Let me know in the comments or reach out on [Twitter](https://twitter.com/repsforreels).**
+**Which app have you tried? What worked for you? Let me know in the comments or reach out on [Twitter](https://x.com/repsforreels).**
 
 ---
 

@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Twitter } from 'lucide-svelte';
-
 	interface Props {
 		name: string;
 		title?: string;
@@ -29,13 +27,15 @@
 			<h4 class="font-semibold text-text-primary">{name}</h4>
 			{#if twitter}
 				<a
-					href="https://twitter.com/{twitter.replace('@', '')}"
+					href="https://x.com/{twitter.replace('@', '')}"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="text-text-muted hover:text-[#FCAF45] transition-colors"
-					aria-label="Follow {name} on Twitter"
+					aria-label="Follow {name} on X"
 				>
-					<Twitter class="w-4 h-4" />
+					<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+					</svg>
 				</a>
 			{/if}
 		</div>

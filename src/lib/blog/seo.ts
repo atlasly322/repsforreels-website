@@ -33,7 +33,7 @@ export function generateBlogPostSchema(post: ProcessedBlogPost) {
 			...(post.authorTitle && { jobTitle: post.authorTitle }),
 			...(post.authorImage && { image: `${siteConfig.url}${post.authorImage}` }),
 			...(post.authorTwitter && {
-				sameAs: [`https://twitter.com/${post.authorTwitter.replace('@', '')}`]
+				sameAs: [`https://x.com/${post.authorTwitter.replace('@', '')}`]
 			})
 		},
 		publisher: {

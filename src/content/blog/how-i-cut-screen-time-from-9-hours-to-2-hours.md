@@ -228,7 +228,7 @@ And if you want to take it to the next level with AI-verified exercises and auto
 
 ---
 
-*Have your own screen time struggle story? I'd love to hear it. Drop a comment below or reach out on [Twitter](https://twitter.com/repsforreels).*
+*Have your own screen time struggle story? I'd love to hear it. Drop a comment below or reach out on [Twitter](https://x.com/repsforreels).*
 
 ---
 
