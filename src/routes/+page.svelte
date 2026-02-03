@@ -34,7 +34,7 @@
 		Play
 	} from 'lucide-svelte';
 
-	// Email waitlist state
+	// Email waitlist state (kept for potential future use)
 	let email = $state('');
 	let honeypot = $state(''); // Bot trap - should remain empty
 	let turnstileToken = $state(''); // Cloudflare Turnstile token
@@ -144,7 +144,7 @@
 		};
 		window.addEventListener('scroll', handleScroll);
 
-		// Load Cloudflare Turnstile script
+		// Load Cloudflare Turnstile script (kept for potential future use)
 		if (TURNSTILE_SITE_KEY) {
 			const script = document.createElement('script');
 			script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad';
@@ -199,7 +199,7 @@
 		},
 		{
 			question: 'Does RepsForReels work on both iOS and Android?',
-			answer: 'RepsForReels is launching soon on both iOS (App Store) and Android (Google Play). Join our waitlist to be the first to know when we launch! Both versions will use platform-native screen time APIs for the best possible blocking experience.'
+			answer: 'RepsForReels is available now on iOS! Download it free from the App Store. Android support is coming soon — follow us on social media for updates.'
 		},
 		{
 			question: 'Is my camera data private?',
@@ -359,10 +359,10 @@
 				<a href="/blog" class="text-text-secondary hover:text-white transition-colors text-sm">Blog</a>
 				<a href="#faq" class="text-text-secondary hover:text-white transition-colors text-sm">FAQ</a>
 			</div>
-			<a href="#download" class="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden">
+			<a href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden">
 				<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45]"></div>
 				<div class="absolute inset-[1px] bg-background rounded-[10px] group-hover:bg-transparent transition-colors duration-300"></div>
-				<span class="relative bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">Join Waitlist</span>
+				<span class="relative bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">Download</span>
 			</a>
 		</div>
 	</div>
@@ -386,7 +386,7 @@
 						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FCAF45] opacity-75"></span>
 						<span class="relative inline-flex rounded-full h-2 w-2 bg-[#FCAF45]"></span>
 					</span>
-					<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent font-medium">Launching Soon on iOS & Android</span>
+					<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent font-medium">Now Available on iOS</span>
 				</div>
 
 				<h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight mb-6 leading-[0.95]">
@@ -399,71 +399,25 @@
 					<span class="text-white font-medium">AI-powered pose detection</span> to earn screen time minutes.
 				</p>
 
-				<!-- Email Waitlist Form -->
+				<!-- Download CTA -->
 				<div class="max-w-md mx-auto lg:mx-0">
-					{#if emailSubmitStatus === 'success'}
-						<div class="flex items-center gap-3 bg-[#8DD04A]/10 border border-[#8DD04A]/30 rounded-2xl p-4">
-							<CheckCircle2 class="w-6 h-6 text-[#8DD04A] flex-shrink-0" />
-							<div>
-								<p class="text-white font-semibold">You're on the list!</p>
-								<p class="text-text-secondary text-sm">We'll notify you when RepsForReels launches.</p>
-							</div>
-						</div>
-					{:else}
-						<form onsubmit={handleEmailSubmit} class="space-y-3">
-							<!-- Honeypot field - hidden from users, bots will fill it -->
-							<div class="absolute -left-[9999px] opacity-0 pointer-events-none" aria-hidden="true">
-								<label for="website_url">Website</label>
-								<input
-									type="text"
-									id="website_url"
-									name="website_url"
-									bind:value={honeypot}
-									tabindex="-1"
-									autocomplete="off"
-								/>
-							</div>
-							<div class="flex flex-col sm:flex-row gap-3">
-								<div class="relative flex-1">
-									<Mail class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
-									<input
-										type="email"
-										bind:value={email}
-										placeholder="Enter your email"
-										disabled={emailSubmitStatus === 'loading'}
-										class="w-full pl-12 pr-4 py-3.5 bg-surface/80 border border-white/10 rounded-xl text-white placeholder-text-muted focus:outline-none focus:border-[#833AB4]/50 focus:ring-2 focus:ring-[#833AB4]/20 transition-all disabled:opacity-50"
-									/>
-								</div>
-								<button
-									type="submit"
-									disabled={emailSubmitStatus === 'loading'}
-									class="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm overflow-hidden cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-								>
-									<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45]"></div>
-									{#if emailSubmitStatus === 'loading'}
-										<Loader2 class="relative w-5 h-5 text-white animate-spin" />
-									{:else}
-										<span class="relative text-white">Join Waitlist</span>
-										<ArrowRight class="relative w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
-									{/if}
-								</button>
-							</div>
-							{#if emailError}
-								<p class="text-red-400 text-sm">{emailError}</p>
-							{/if}
-							<!-- Cloudflare Turnstile Widget -->
-							{#if TURNSTILE_SITE_KEY}
-								<div class="turnstile-container"></div>
-							{/if}
-							<p class="text-text-muted text-sm flex items-center gap-2">
-								<Bell class="w-4 h-4" />
-								Be the first to know when we launch. No spam, ever.
-							</p>
-							<p class="text-text-muted text-xs">
-								By joining, you agree to our <a href="/privacy" class="text-[#4ECDC4] hover:underline">Privacy Policy</a>.
-							</p>
-						</form>
-					{/if}
+					<a
+						href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-block transition-transform hover:scale-105"
+					>
+						<img
+							src="/badge-app-store.svg"
+							alt="Download on the App Store"
+							width="180"
+							height="60"
+							class="h-14"
+						/>
+					</a>
+					<p class="text-text-muted text-sm mt-4">
+						Android coming soon. <span class="text-white">Free to download.</span>
+					</p>
 				</div>
 
 				<!-- Early adopters social proof -->
@@ -476,8 +430,8 @@
 						<div class="w-9 h-9 rounded-full bg-gradient-to-r from-[#833AB4] to-[#F77737] border-2 border-background flex items-center justify-center text-xs font-bold text-white">+</div>
 					</div>
 					<div class="text-left">
-						<p class="text-white font-semibold text-sm">Join early adopters</p>
-						<p class="text-xs text-text-muted">Get exclusive launch perks</p>
+						<p class="text-white font-semibold text-sm">Join thousands of users</p>
+						<p class="text-xs text-text-muted">Transforming scroll time into fitness</p>
 					</div>
 				</div>
 			</div>
@@ -900,76 +854,41 @@
 		</div>
 
 		<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-			<span class="text-white">Be the first to </span>
+			<span class="text-white">Ready to </span>
 			<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45] bg-clip-text text-transparent">transform your screen time</span>
+			<span class="text-white">?</span>
 		</h2>
 		<p class="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
-			RepsForReels is launching soon on iOS and Android. Join the waitlist to get early access and exclusive launch perks.
+			RepsForReels is available now on iOS. Download free and start earning your scroll time.
 		</p>
 
-		<!-- CTA Email Form -->
-		<div class="max-w-lg mx-auto">
-			{#if emailSubmitStatus === 'success'}
-				<div class="flex items-center justify-center gap-3 bg-[#8DD04A]/10 border border-[#8DD04A]/30 rounded-2xl p-5">
-					<CheckCircle2 class="w-7 h-7 text-[#8DD04A] flex-shrink-0" />
-					<div class="text-left">
-						<p class="text-white font-semibold text-lg">You're on the list!</p>
-						<p class="text-text-secondary">We'll notify you when RepsForReels launches.</p>
-					</div>
-				</div>
-			{:else}
-				<form onsubmit={handleEmailSubmit} class="space-y-4">
-					<!-- Honeypot field - hidden from users -->
-					<div class="absolute -left-[9999px] opacity-0 pointer-events-none" aria-hidden="true">
-						<input type="text" name="company" bind:value={honeypot} tabindex="-1" autocomplete="off" />
-					</div>
-					<div class="flex flex-col sm:flex-row gap-3">
-						<div class="relative flex-1">
-							<Mail class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
-							<input
-								type="email"
-								bind:value={email}
-								placeholder="Enter your email"
-								disabled={emailSubmitStatus === 'loading'}
-								class="w-full pl-12 pr-4 py-4 bg-surface/80 border border-white/10 rounded-xl text-white placeholder-text-muted focus:outline-none focus:border-[#833AB4]/50 focus:ring-2 focus:ring-[#833AB4]/20 transition-all disabled:opacity-50 text-lg"
-							/>
-						</div>
-						<button
-							type="submit"
-							disabled={emailSubmitStatus === 'loading'}
-							class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold overflow-hidden cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-						>
-							<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45]"></div>
-							{#if emailSubmitStatus === 'loading'}
-								<Loader2 class="relative w-5 h-5 text-white animate-spin" />
-							{:else}
-								<span class="relative text-white">Join Waitlist</span>
-								<ArrowRight class="relative w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
-							{/if}
-						</button>
-					</div>
-					{#if emailError}
-						<p class="text-red-400 text-sm">{emailError}</p>
-					{/if}
-					<!-- Cloudflare Turnstile Widget -->
-					{#if TURNSTILE_SITE_KEY}
-						<div class="turnstile-container"></div>
-					{/if}
-					<p class="text-text-muted text-xs text-center">
-						By joining, you agree to our <a href="/privacy" class="text-[#4ECDC4] hover:underline">Privacy Policy</a>.
-					</p>
-				</form>
-			{/if}
-		</div>
+		<!-- Download Buttons -->
+		<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+			<!-- App Store - Active -->
+			<a
+				href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="transition-transform hover:scale-105"
+			>
+				<img
+					src="/badge-app-store.svg"
+					alt="Download on the App Store"
+					width="180"
+					height="60"
+					class="h-14"
+				/>
+			</a>
 
-		<!-- Platform badges (coming soon) -->
-		<div class="mt-10 flex items-center justify-center gap-6">
+			<!-- Google Play - Coming Soon -->
 			<div class="flex items-center gap-2 text-text-muted">
-				<img src="/badge-app-store.svg" alt="App Store" width="135" height="40" class="h-8 opacity-40" loading="lazy" />
-				<span class="text-sm">Coming Soon</span>
-			</div>
-			<div class="flex items-center gap-2 text-text-muted">
-				<img src="/badge-google-play.svg" alt="Google Play" width="135" height="40" class="h-8 opacity-40" loading="lazy" />
+				<img
+					src="/badge-google-play.svg"
+					alt="Google Play"
+					width="180"
+					height="60"
+					class="h-14 opacity-40"
+				/>
 				<span class="text-sm">Coming Soon</span>
 			</div>
 		</div>
@@ -998,7 +917,7 @@
 					RepsForReels is a mobile app that blocks social media until you exercise. Transform your screen time addiction into fitness gains. No reps, no reels.
 				</p>
 				<p class="text-text-muted text-sm">
-					Launching soon on iOS & Android. <a href="#download" class="text-[#4ECDC4] hover:underline">Join the waitlist</a> for early access.
+					Available now on <a href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer">iOS</a>. Android coming soon.
 				</p>
 			</div>
 
