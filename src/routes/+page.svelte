@@ -443,8 +443,8 @@
 			<div class="text-center lg:text-left">
 				<div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm mb-8 backdrop-blur-sm">
 					<span class="relative flex h-2 w-2">
-						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FCAF45] opacity-75"></span>
-						<span class="relative inline-flex rounded-full h-2 w-2 bg-[#FCAF45]"></span>
+						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22C55E] opacity-75"></span>
+						<span class="relative inline-flex rounded-full h-2 w-2 bg-[#22C55E]"></span>
 					</span>
 					<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent font-medium">Available on iOS & Android</span>
 				</div>
