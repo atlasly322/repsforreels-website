@@ -199,7 +199,7 @@
 		},
 		{
 			question: 'Does RepsForReels work on both iOS and Android?',
-			answer: 'RepsForReels is available now on iOS! Download it free from the App Store. Android support is coming soon — follow us on social media for updates.'
+			answer: 'Yes! RepsForReels is available on both iOS and Android. Download it free from the App Store or Google Play.'
 		},
 		{
 			question: 'Is my camera data private?',
@@ -386,7 +386,7 @@
 						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FCAF45] opacity-75"></span>
 						<span class="relative inline-flex rounded-full h-2 w-2 bg-[#FCAF45]"></span>
 					</span>
-					<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent font-medium">Now Available on iOS</span>
+					<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent font-medium">Available on iOS & Android</span>
 				</div>
 
 				<h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight mb-6 leading-[0.95]">
@@ -401,22 +401,38 @@
 
 				<!-- Download CTA -->
 				<div class="max-w-md mx-auto lg:mx-0">
-					<a
-						href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-block transition-transform hover:scale-105"
-					>
-						<img
-							src="/badge-app-store.svg"
-							alt="Download on the App Store"
-							width="180"
-							height="60"
-							class="h-14"
-						/>
-					</a>
+					<div class="flex flex-wrap gap-4">
+						<a
+							href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-block transition-transform hover:scale-105"
+						>
+							<img
+								src="/badge-app-store.svg"
+								alt="Download on the App Store"
+								width="180"
+								height="60"
+								class="h-14"
+							/>
+						</a>
+						<a
+							href="https://play.google.com/store/apps/details?id=com.repsforreels.app"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-block transition-transform hover:scale-105"
+						>
+							<img
+								src="/badge-google-play.svg"
+								alt="Get it on Google Play"
+								width="180"
+								height="60"
+								class="h-14"
+							/>
+						</a>
+					</div>
 					<p class="text-text-muted text-sm mt-4">
-						Android coming soon. <span class="text-white">Free to download.</span>
+						<span class="text-white">Free on iOS & Android.</span>
 					</p>
 				</div>
 
@@ -859,12 +875,11 @@
 			<span class="text-white">?</span>
 		</h2>
 		<p class="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
-			RepsForReels is available now on iOS. Download free and start earning your scroll time.
+			Download free on iOS or Android and start earning your scroll time.
 		</p>
 
 		<!-- Download Buttons -->
 		<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-			<!-- App Store - Active -->
 			<a
 				href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
 				target="_blank"
@@ -880,17 +895,20 @@
 				/>
 			</a>
 
-			<!-- Google Play - Coming Soon -->
-			<div class="flex items-center gap-2 text-text-muted">
+			<a
+				href="https://play.google.com/store/apps/details?id=com.repsforreels.app"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="transition-transform hover:scale-105"
+			>
 				<img
 					src="/badge-google-play.svg"
-					alt="Google Play"
+					alt="Get it on Google Play"
 					width="180"
 					height="60"
-					class="h-14 opacity-40"
+					class="h-14"
 				/>
-				<span class="text-sm">Coming Soon</span>
-			</div>
+			</a>
 		</div>
 	</div>
 </section>
@@ -917,7 +935,7 @@
 					RepsForReels is a mobile app that blocks social media until you exercise. Transform your screen time addiction into fitness gains. No reps, no reels.
 				</p>
 				<p class="text-text-muted text-sm">
-					Available now on <a href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer">iOS</a>. Android coming soon.
+					Available on <a href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer">Android</a>.
 				</p>
 			</div>
 

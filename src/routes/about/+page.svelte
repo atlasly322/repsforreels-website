@@ -403,20 +403,21 @@
 
 				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 					<a
+						href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="hover:scale-105 transition-transform"
+					>
+						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-14" />
+					</a>
+					<a
 						href="https://play.google.com/store/apps/details?id=com.repsforreels.app"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="relative hover:scale-105 transition-transform"
+						class="hover:scale-105 transition-transform"
 					>
 						<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-14" />
 					</a>
-					<button
-						onclick={() => alert('Coming soon to iOS!')}
-						class="relative hover:scale-105 transition-transform cursor-pointer"
-					>
-						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-14 opacity-60" />
-						<span class="absolute -top-2 -right-2 bg-accent text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full">SOON</span>
-					</button>
 				</div>
 
 				<p class="text-text-muted text-sm mt-6">
