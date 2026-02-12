@@ -2,6 +2,7 @@
 	import { generateAllStructuredData, siteConfig } from '$lib/seo';
 	import { addToWaitlist, generateFingerprint, TURNSTILE_SITE_KEY } from '$lib/convex';
 	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 	import { z } from 'zod';
 	import {
 		Scan,
@@ -144,6 +145,21 @@
 		};
 		window.addEventListener('scroll', handleScroll);
 
+		// Download dropdown: click-outside and Escape key handlers
+		function handleClickOutside(e: MouseEvent) {
+			if (downloadRef && !downloadRef.contains(e.target as Node)) {
+				downloadOpen = false;
+			}
+		}
+		function handleEscape(e: KeyboardEvent) {
+			if (e.key === 'Escape' && downloadOpen) {
+				downloadOpen = false;
+				downloadButtonRef?.focus();
+			}
+		}
+		document.addEventListener('click', handleClickOutside);
+		document.addEventListener('keydown', handleEscape);
+
 		// Load Cloudflare Turnstile script (kept for potential future use)
 		if (TURNSTILE_SITE_KEY) {
 			const script = document.createElement('script');
@@ -176,6 +192,8 @@
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			document.removeEventListener('click', handleClickOutside);
+			document.removeEventListener('keydown', handleEscape);
 		};
 	});
 
@@ -311,6 +329,11 @@
 	function toggleFaq(index: number) {
 		openFaq = openFaq === index ? null : index;
 	}
+
+	// Download dropdown state
+	let downloadOpen = $state(false);
+	let downloadRef = $state<HTMLDivElement | null>(null);
+	let downloadButtonRef = $state<HTMLButtonElement | null>(null);
 </script>
 
 <svelte:head>
@@ -359,11 +382,48 @@
 				<a href="/blog" class="text-text-secondary hover:text-white transition-colors text-sm">Blog</a>
 				<a href="#faq" class="text-text-secondary hover:text-white transition-colors text-sm">FAQ</a>
 			</div>
-			<a href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden">
-				<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45]"></div>
-				<div class="absolute inset-[1px] bg-background rounded-[10px] group-hover:bg-transparent transition-colors duration-300"></div>
-				<span class="relative bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">Download</span>
-			</a>
+			<div class="relative" bind:this={downloadRef}>
+				<button
+					bind:this={downloadButtonRef}
+					onclick={() => downloadOpen = !downloadOpen}
+					class="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden"
+					aria-expanded={downloadOpen}
+					aria-haspopup="true"
+				>
+					<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45]"></div>
+					<div class="absolute inset-[1px] bg-background rounded-[10px] group-hover:bg-transparent transition-colors duration-300"></div>
+					<span class="relative bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">Download</span>
+					<ChevronDown class="relative w-3.5 h-3.5 text-[#DD2A7B] group-hover:text-white transition-all duration-200 {downloadOpen ? 'rotate-180' : ''}" />
+				</button>
+
+				{#if downloadOpen}
+					<div
+						class="absolute right-0 top-full mt-2 w-56 rounded-2xl bg-surface/95 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 overflow-hidden"
+						role="menu"
+						transition:slide={{ duration: 150, axis: 'y' }}
+					>
+						<a
+							href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
+							role="menuitem"
+						>
+							<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-9" />
+						</a>
+						<div class="h-px bg-white/5"></div>
+						<a
+							href="https://play.google.com/store/apps/details?id=com.repsforreels.app"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
+							role="menuitem"
+						>
+							<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-9" />
+						</a>
+					</div>
+				{/if}
+			</div>
 		</div>
 	</div>
 </nav>
