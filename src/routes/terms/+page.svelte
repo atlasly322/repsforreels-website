@@ -86,7 +86,7 @@
 
 			<section class="mb-12">
 				<h2 class="text-2xl font-bold text-white mb-4">8. Subscription and Payment</h2>
-				<p class="text-text-secondary mb-4">RepsForReels offers both free and premium subscription tiers. Premium subscriptions ("Pro") are managed through your device's app store (Apple App Store or Google Play Store).</p>
+				<p class="text-text-secondary mb-4">RepsForReels offers a premium subscription ("Pro") with a free trial for new users. Subscriptions are managed through your device's app store (Apple App Store or Google Play Store).</p>
 				<p class="text-text-secondary mb-4">Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current billing period. You can manage or cancel your subscription through your device's app store settings.</p>
 				<p class="text-text-secondary">Prices may vary by region and are subject to change. Any price changes will not affect your current subscription period.</p>
 			</section>

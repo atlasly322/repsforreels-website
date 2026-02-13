@@ -209,7 +209,7 @@
 		},
 		{
 			question: 'Is RepsForReels free to use?',
-			answer: 'RepsForReels offers a free tier with core features including basic exercise detection and app blocking. Go Pro to unlock unlimited app blocking, all exercises, detailed analytics, and an ad-free experience. Pricing varies by region.'
+			answer: 'RepsForReels includes a free 7-day trial with full access to all features. After the trial, a Pro subscription unlocks unlimited exercise sessions, all conversion rates, unlimited app blocking, and an ad-free experience. Pricing varies by region.'
 		},
 		{
 			question: 'Which exercises are supported?',
