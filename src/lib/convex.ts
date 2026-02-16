@@ -1,7 +1,10 @@
 import { ConvexHttpClient } from "convex/browser";
 
-// Production Convex URL - must match EXPO_PUBLIC_CONVEX_URL in .env.local
-const CONVEX_URL = import.meta.env.VITE_CONVEX_URL || "https://fiery-sturgeon-31.convex.cloud";
+// Production Convex URL - must be set in environment variables
+const CONVEX_URL = import.meta.env.VITE_CONVEX_URL;
+if (!CONVEX_URL) {
+  throw new Error("VITE_CONVEX_URL environment variable is required");
+}
 
 // Cloudflare Turnstile Site Key - set in Cloudflare Pages environment variables
 export const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY as string;
