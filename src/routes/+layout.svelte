@@ -1,8 +1,15 @@
 <script lang="ts">
 	import './layout.css';
+	import { page } from '$app/state';
 	import { siteConfig } from '$lib/seo';
 
 	let { children } = $props();
+
+	const canonicalUrl = $derived(
+		page.url.pathname === '/'
+			? siteConfig.url
+			: `${siteConfig.url}${page.url.pathname}`
+	);
 </script>
 
 <svelte:head>
@@ -23,7 +30,7 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content={siteConfig.url} />
+	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:title" content="{siteConfig.name} - {siteConfig.tagline}" />
 	<meta property="og:description" content={siteConfig.description} />
 	<meta property="og:image" content="{siteConfig.url}{siteConfig.ogImage}" />
@@ -35,7 +42,7 @@
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content={siteConfig.url} />
+	<meta name="twitter:url" content={canonicalUrl} />
 	<meta name="twitter:title" content="{siteConfig.name} - {siteConfig.tagline}" />
 	<meta name="twitter:description" content={siteConfig.description} />
 	<meta name="twitter:image" content="{siteConfig.url}{siteConfig.ogImage}" />
@@ -58,7 +65,7 @@
 	<link rel="mask-icon" href="/logo-shield.svg" color="#833AB4" />
 
 	<!-- Canonical URL -->
-	<link rel="canonical" href={siteConfig.url} />
+	<link rel="canonical" href={canonicalUrl} />
 
 	<!-- Web App Manifest -->
 	<link rel="manifest" href="/manifest.json" />
