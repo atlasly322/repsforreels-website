@@ -68,13 +68,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<!-- Preconnect for performance -->
-	<link rel="preconnect" href="https://randomuser.me" />
-	<link rel="dns-prefetch" href="https://randomuser.me" />
-
 	<!-- App Store Links (for smart banners) -->
 	<meta name="google-play-app" content="app-id={siteConfig.appId.android}" />
-	<!-- <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID" /> -->
+	<meta name="apple-itunes-app" content="app-id=6757309601" />
 </svelte:head>
 
 {@render children()}

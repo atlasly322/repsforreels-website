@@ -35,8 +35,6 @@
 
 			<!-- Desktop Nav -->
 			<div class="hidden md:flex items-center gap-8">
-				<a href="/#about" class="text-text-secondary hover:text-white transition-colors text-sm">About</a>
-				<a href="/#features" class="text-text-secondary hover:text-white transition-colors text-sm">Features</a>
 				<a href="/#how-it-works" class="text-text-secondary hover:text-white transition-colors text-sm">How it Works</a>
 				<a href="/blog" class="{isBlogPage ? 'text-white font-medium' : 'text-text-secondary'} hover:text-white transition-colors text-sm">Blog</a>
 				<a href="/#faq" class="text-text-secondary hover:text-white transition-colors text-sm">FAQ</a>
@@ -68,8 +66,6 @@
 	{#if mobileMenuOpen}
 		<div class="md:hidden bg-background/95 backdrop-blur-xl border-b border-white/5">
 			<div class="px-4 py-4 space-y-3">
-				<a href="/#about" onclick={closeMenu} class="block py-2 text-text-secondary hover:text-white transition-colors">About</a>
-				<a href="/#features" onclick={closeMenu} class="block py-2 text-text-secondary hover:text-white transition-colors">Features</a>
 				<a href="/#how-it-works" onclick={closeMenu} class="block py-2 text-text-secondary hover:text-white transition-colors">How it Works</a>
 				<a href="/blog" onclick={closeMenu} class="block py-2 {isBlogPage ? 'text-white font-medium' : 'text-text-secondary'} hover:text-white transition-colors">Blog</a>
 				<a href="/#faq" onclick={closeMenu} class="block py-2 text-text-secondary hover:text-white transition-colors">FAQ</a>

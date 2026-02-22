@@ -403,7 +403,7 @@
 
 				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 					<a
-						href="https://apps.apple.com/gb/app/repsforreels-no-reps-no-reels/id6757309601"
+						href="https://apps.apple.com/gb/app/repsforreels-app-blocker/id6757309601"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="hover:scale-105 transition-transform"

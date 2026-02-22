@@ -47,8 +47,8 @@ export const siteConfig = {
 	backgroundColor: '#0A0A0F',
 	locale: 'en_US',
 	socialLinks: {
-		playStore: 'https://play.google.com/store/apps/details?id=com.repsforreels.app'
-		// appStore: 'https://apps.apple.com/app/repsforreels/id...' // Add when available
+		playStore: 'https://play.google.com/store/apps/details?id=com.repsforreels.app',
+		appStore: 'https://apps.apple.com/gb/app/repsforreels-app-blocker/id6757309601'
 		// twitter: 'https://twitter.com/repsforreels',
 		// instagram: 'https://instagram.com/repsforreels',
 	}
@@ -105,7 +105,8 @@ export function generateOrganizationSchema() {
 		foundingDate: siteConfig.foundingDate,
 		slogan: siteConfig.tagline,
 		sameAs: [
-			siteConfig.socialLinks.playStore
+			siteConfig.socialLinks.playStore,
+			siteConfig.socialLinks.appStore
 			// Add more social links as they become available
 		].filter(Boolean),
 		contactPoint: {
@@ -195,13 +196,26 @@ export function generateMobileApplicationSchema() {
 		operatingSystem: ['Android', 'iOS'],
 		softwareVersion: '1.0.0',
 		releaseNotes: 'Initial release with AI-powered exercise detection and social media blocking',
-		downloadUrl: siteConfig.socialLinks.playStore,
-		installUrl: siteConfig.socialLinks.playStore,
+		downloadUrl: siteConfig.socialLinks.appStore,
+		installUrl: siteConfig.socialLinks.appStore,
 		screenshot: [
 			{
 				'@type': 'ImageObject',
-				url: `${siteConfig.url}/app-screenshot.jpg`,
-				caption: 'RepsForReels app showing exercise tracking interface'
+				url: `${siteConfig.url}/mockup-home.png`,
+				caption:
+					'RepsForReels home screen — weekly exercise tracker, screen time balance, pushups and squats'
+			},
+			{
+				'@type': 'ImageObject',
+				url: `${siteConfig.url}/mockup-reps.png`,
+				caption:
+					'RepsForReels AI pose detection — camera tracking pushup form with real-time rep counter'
+			},
+			{
+				'@type': 'ImageObject',
+				url: `${siteConfig.url}/mockup-block.png`,
+				caption:
+					'Instagram blocked by RepsForReels — showing time bank balance and unlock button'
 			}
 		],
 		featureList: [
@@ -211,7 +225,7 @@ export function generateMobileApplicationSchema() {
 			'Screen time management through physical activity',
 			'Progress tracking with streaks and achievements',
 			'Privacy-first: all processing happens on-device',
-			'Time banking: earn screen time minutes per rep',
+			'Time banking: configurable conversion rates from 30s to 3min per rep',
 			'Customizable app restrictions'
 		],
 		offers: {
@@ -220,13 +234,6 @@ export function generateMobileApplicationSchema() {
 			priceCurrency: 'USD',
 			availability: 'https://schema.org/InStock',
 			description: 'Free to download with optional premium subscription for advanced features'
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			ratingCount: '500',
-			bestRating: '5',
-			worstRating: '1'
 		},
 		author: {
 			'@id': `${siteConfig.url}/#organization`
@@ -321,14 +328,14 @@ export function generateHowToSchema() {
 				'@type': 'HowToStep',
 				position: 3,
 				name: 'Complete exercises to earn screen time',
-				text: 'When you want to use a blocked app, complete exercises like pushups or squats. The AI-powered camera verifies your form and counts your reps in real-time.',
+				text: 'When you want to use a blocked app, complete exercises like pushups or squats. The AI-powered camera verifies your form and counts your reps in real-time. Choose your conversion rate — from 30 seconds to 3 minutes earned per rep.',
 				url: `${siteConfig.url}/#how-it-works`
 			},
 			{
 				'@type': 'HowToStep',
 				position: 4,
 				name: 'Unlock and scroll guilt-free',
-				text: 'After completing your exercises, your earned screen time is added to your balance. Use it to access your blocked apps. More reps = more reels!',
+				text: 'Your earned time is banked in 5-minute unlock slots. Spend them whenever you want. Unused time rolls over to the next day. More reps = more reels!',
 				url: `${siteConfig.url}/#how-it-works`
 			}
 		]
@@ -360,44 +367,7 @@ export function generateProductSchema() {
 			seller: {
 				'@id': `${siteConfig.url}/#organization`
 			}
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			reviewCount: '500',
-			bestRating: '5',
-			worstRating: '1'
-		},
-		review: [
-			{
-				'@type': 'Review',
-				reviewRating: {
-					'@type': 'Rating',
-					ratingValue: '5',
-					bestRating: '5'
-				},
-				author: {
-					'@type': 'Person',
-					name: 'James Davidson'
-				},
-				reviewBody:
-					"RepsForReels completely changed my relationship with my phone. I've done more pushups in the last month than the entire previous year!"
-			},
-			{
-				'@type': 'Review',
-				reviewRating: {
-					'@type': 'Rating',
-					ratingValue: '5',
-					bestRating: '5'
-				},
-				author: {
-					'@type': 'Person',
-					name: 'Aisha Khan'
-				},
-				reviewBody:
-					'Finally an app that actually works for limiting screen time. The AI detection is surprisingly accurate.'
-			}
-		]
+		}
 	};
 }
 
