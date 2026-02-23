@@ -7,9 +7,9 @@ export const siteConfig = {
 	alternateName: 'Reps For Reels',
 	tagline: 'No reps, no reels.',
 	description:
-		'RepsForReels is a mobile app that blocks social media access until you exercise. Complete pushups, squats, and other exercises verified by AI pose detection to earn screen time minutes. Transform your scrolling addiction into fitness gains.',
+		'RepsForReels is a screen time blocker and app blocker that locks social media until you exercise. Complete pushups and squats verified by AI pose detection to earn screen time. The dopamine detox app that turns doomscrolling into fitness gains.',
 	shortDescription:
-		'Block social media until you exercise. AI-powered pose detection verifies your workouts and rewards you with screen time.',
+		'Block social media until you exercise. AI counts your reps. Earn screen time.',
 	url: 'https://repsforreels.app',
 	ogImage: '/og-image.png',
 	logo: '/app-icon.png',
@@ -22,24 +22,24 @@ export const siteConfig = {
 	},
 	keywords: [
 		'RepsForReels',
-		'Reps For Reels',
-		'reps for reels app',
 		'screen time blocker app',
+		'app blocker exercise',
+		'earn screen time',
+		'block apps until workout',
 		'exercise to unlock phone',
 		'fitness app blocker',
 		'social media blocker',
 		'AI pose detection app',
-		'workout for screen time',
-		'digital wellbeing app',
+		'dopamine detox app',
+		'screen time limit exercise',
+		'parental control fitness',
+		'pushup counter app',
+		'digital detox app',
 		'app that blocks social media until exercise',
-		'pushups to unlock Instagram',
-		'squats for TikTok',
-		'screen time control',
-		'fitness motivation app',
+		'workout for screen time',
 		'doomscrolling cure',
 		'phone addiction app',
-		'exercise tracker',
-		'habit building app',
+		'screen time control',
 		'gamified fitness'
 	],
 	author: 'RepsForReels',
@@ -186,8 +186,8 @@ export function generateMobileApplicationSchema() {
 		applicationCategory: 'HealthApplication',
 		applicationSubCategory: ['FitnessApplication', 'LifestyleApplication'],
 		operatingSystem: ['Android', 'iOS'],
-		softwareVersion: '1.0.0',
-		releaseNotes: 'Initial release with AI-powered exercise detection and social media blocking',
+		softwareVersion: '1.0.3',
+		releaseNotes: 'AI-powered exercise detection, real app blocking, and screen time earning',
 		downloadUrl: siteConfig.socialLinks.appStore,
 		installUrl: siteConfig.socialLinks.appStore,
 		screenshot: [
@@ -220,13 +220,31 @@ export function generateMobileApplicationSchema() {
 			'Time banking: configurable conversion rates from 30s to 3min per rep',
 			'Customizable app restrictions'
 		],
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-			availability: 'https://schema.org/InStock',
-			description: 'Free to download with optional premium subscription for advanced features'
-		},
+		offers: [
+			{
+				'@type': 'Offer',
+				price: '0',
+				priceCurrency: 'USD',
+				availability: 'https://schema.org/InStock',
+				description: 'Free 7-day trial with full Pro access'
+			},
+			{
+				'@type': 'Offer',
+				price: '4.99',
+				priceCurrency: 'USD',
+				availability: 'https://schema.org/InStock',
+				priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
+				description: 'RepsForReels Pro Monthly — unlimited sessions, all conversion rates, unlimited app blocking, ad-free'
+			},
+			{
+				'@type': 'Offer',
+				price: '29.99',
+				priceCurrency: 'USD',
+				availability: 'https://schema.org/InStock',
+				priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
+				description: 'RepsForReels Pro Annual — 7-day free trial, then $29.99/year. Best value.'
+			}
+		],
 		author: {
 			'@id': `${siteConfig.url}/#organization`
 		},

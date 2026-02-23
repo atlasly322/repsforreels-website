@@ -68,7 +68,11 @@
 		},
 		{
 			question: 'Is it free?',
-			answer: 'RepsForReels includes a free 7-day trial with full access to all features. After the trial, a Pro subscription unlocks unlimited exercise sessions, all conversion rates, unlimited app blocking, and an ad-free experience. Pricing varies by region.'
+			answer: 'RepsForReels includes a free 7-day trial with full access to all Pro features — the best way to try a screen time blocker and digital detox app risk-free. After the trial, a Pro subscription unlocks unlimited exercise sessions, all conversion rates, unlimited app blocking, and an ad-free experience. Plans start at $29.99/year or $4.99/month.'
+		},
+		{
+			question: 'How is RepsForReels different from other screen time apps?',
+			answer: 'Most screen time apps like Opal, ScreenZen, and Freedom rely on willpower — they block apps but give you nothing in return. RepsForReels is the only app blocker that rewards exercise with screen time. Instead of just locking your phone, it uses AI pose detection to verify real pushups and squats, then earns you minutes to scroll. It\'s positive reinforcement vs. pure restriction — and it builds a workout habit as a side effect.'
 		},
 		{
 			question: 'Which exercises are supported?',
@@ -323,6 +327,66 @@
 						</picture>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Why RepsForReels Section -->
+<section class="py-24 relative z-10">
+	<div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-16" use:reveal={{ y: 20 }}>
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+				<span class="text-white">Why </span>
+				<span class="bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent">RepsForReels</span>
+				<span class="text-white">?</span>
+			</h2>
+			<p class="text-lg text-text-secondary max-w-2xl mx-auto">
+				Other screen time apps rely on willpower. We reward you for healthy behavior.
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-3 gap-8">
+			<!-- Card 1: AI Detection -->
+			<div
+				class="bg-surface/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-[#4ECDC4]/20 transition-colors"
+				use:reveal={{ delay: 0, y: 30 }}
+			>
+				<div class="w-12 h-12 rounded-xl bg-[#4ECDC4]/10 flex items-center justify-center mb-5">
+					<svg class="w-6 h-6 text-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">AI-Powered Exercise Detection</h3>
+				<p class="text-text-secondary leading-relaxed">
+					Advanced AI pose detection verifies every pushup and squat in real-time. No fake reps — the camera checks your form and counts accurately, all processed on-device for privacy.
+				</p>
+			</div>
+
+			<!-- Card 2: Real App Blocking -->
+			<div
+				class="bg-surface/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-[#DD2A7B]/20 transition-colors"
+				use:reveal={{ delay: 100, y: 30 }}
+			>
+				<div class="w-12 h-12 rounded-xl bg-[#DD2A7B]/10 flex items-center justify-center mb-5">
+					<svg class="w-6 h-6 text-[#DD2A7B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Real App Blocking</h3>
+				<p class="text-text-secondary leading-relaxed">
+					Not just reminders — RepsForReels uses system-level screen time blocking to lock distracting apps. Block TikTok, Instagram, YouTube, or any app until you complete your workout.
+				</p>
+			</div>
+
+			<!-- Card 3: Earn Screen Time -->
+			<div
+				class="bg-surface/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-[#F77737]/20 transition-colors"
+				use:reveal={{ delay: 200, y: 30 }}
+			>
+				<div class="w-12 h-12 rounded-xl bg-[#F77737]/10 flex items-center justify-center mb-5">
+					<svg class="w-6 h-6 text-[#F77737]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Earn Your Screen Time</h3>
+				<p class="text-text-secondary leading-relaxed">
+					Every rep earns real screen time you can spend whenever you want. Bank minutes in the morning, use them later. A dopamine detox that rewards fitness instead of punishing scrolling.
+				</p>
 			</div>
 		</div>
 	</div>
