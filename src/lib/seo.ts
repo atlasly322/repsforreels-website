@@ -226,7 +226,7 @@ export function generateMobileApplicationSchema() {
 				price: '0',
 				priceCurrency: 'USD',
 				availability: 'https://schema.org/InStock',
-				description: 'Free 7-day trial with full Pro access'
+				description: 'Free 3-day trial with full Pro access'
 			},
 			{
 				'@type': 'Offer',
@@ -242,7 +242,7 @@ export function generateMobileApplicationSchema() {
 				priceCurrency: 'USD',
 				availability: 'https://schema.org/InStock',
 				priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
-				description: 'RepsForReels Pro Annual — 7-day free trial, then $29.99/year. Best value.'
+				description: 'RepsForReels Pro Annual — 3-day free trial, then $29.99/year. Best value.'
 			}
 		],
 		author: {

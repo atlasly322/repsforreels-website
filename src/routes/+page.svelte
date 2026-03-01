@@ -68,7 +68,7 @@
 		},
 		{
 			question: 'Is it free?',
-			answer: 'RepsForReels includes a free 7-day trial with full access to all Pro features — the best way to try a screen time blocker and digital detox app risk-free. After the trial, a Pro subscription unlocks unlimited exercise sessions, all conversion rates, unlimited app blocking, and an ad-free experience. Plans start at $29.99/year or $4.99/month.'
+			answer: 'RepsForReels includes a free 3-day trial with full access to all Pro features — the best way to try a screen time blocker and digital detox app risk-free. After the trial, a Pro subscription unlocks unlimited exercise sessions, all conversion rates, unlimited app blocking, and an ad-free experience. Plans start at $29.99/year or $4.99/month.'
 		},
 		{
 			question: 'How is RepsForReels different from other screen time apps?',
@@ -225,7 +225,7 @@
 
 				<!-- Primary CTA -->
 				<div class="max-w-md mx-auto lg:mx-0">
-					<p class="text-sm font-semibold text-white mb-3">Start Your Free Week</p>
+					<p class="text-sm font-semibold text-white mb-3">Start Your Free Trial</p>
 					<div class="flex flex-col sm:flex-row items-center gap-4">
 						<a
 							href="https://apps.apple.com/gb/app/repsforreels-app-blocker/id6757309601"
@@ -256,7 +256,7 @@
 					<div class="hidden sm:block w-px h-4 bg-white/10"></div>
 					<div class="flex items-center gap-1.5">
 						<Check class="w-4 h-4 text-[#4ECDC4]" />
-						<span>Free 7-day trial</span>
+						<span>Free 3-day trial</span>
 					</div>
 					<div class="hidden sm:block w-px h-4 bg-white/10"></div>
 					<div class="flex items-center gap-1.5">
@@ -505,7 +505,7 @@
 		<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-text-secondary">
 			<div class="flex items-center gap-1.5">
 				<Check class="w-4 h-4 text-[#4ECDC4]" />
-				<span>Free 7-day trial</span>
+				<span>Free 3-day trial</span>
 			</div>
 			<div class="hidden sm:block w-px h-4 bg-white/10"></div>
 			<div class="flex items-center gap-1.5">

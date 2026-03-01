@@ -163,4 +163,4 @@ Earning screen time through exercise isn't just a gimmick — it's a fundamental
 
 Five pushups. Five minutes. That's the deal.
 
-[Download RepsForReels](https://repsforreels.app) and start earning your screen time today. The 7-day free trial gives you full access to every feature — no credit card required.
+[Download RepsForReels](https://repsforreels.app) and start earning your screen time today. The 3-day free trial gives you full access to every feature — no credit card required.

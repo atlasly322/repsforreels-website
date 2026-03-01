@@ -72,7 +72,7 @@ Now let's go deeper on each one.
 
 **Conversion rates**: 30 seconds to 3 minutes per rep (all rates available with Pro). Default is 1 minute — five pushups gets you five minutes.
 
-**Pricing**: Free 7-day trial with full Pro access. Then $4.99/month or $29.99/year.
+**Pricing**: Free 3-day trial with full Pro access. Then $4.99/month or $29.99/year.
 
 **Who it's for**: Anyone who wants to reduce screen time AND get fitter. Especially effective if you have zero exercise habit — the screen time motivation bootstraps the fitness habit.
 
@@ -248,6 +248,6 @@ The most expensive app (Freedom at $8.99/month) isn't the most effective on Andr
 
 If you're serious about reducing screen time on Android, don't rely on Digital Wellbeing alone. Get a third-party app with real blocking enforcement.
 
-My recommendation: **Start with [RepsForReels](https://play.google.com/store/apps/details?id=com.repsforreels.app)** if you want to build a fitness habit alongside your screen time goals (free 7-day trial). Use **AppBlock** if you want pure, no-nonsense blocking. And try **ActionDash** if you're a data person who wants to understand your patterns first.
+My recommendation: **Start with [RepsForReels](https://play.google.com/store/apps/details?id=com.repsforreels.app)** if you want to build a fitness habit alongside your screen time goals (free 3-day trial). Use **AppBlock** if you want pure, no-nonsense blocking. And try **ActionDash** if you're a data person who wants to understand your patterns first.
 
 Whatever you choose, the best Android screen time app is the one you actually keep installed.
