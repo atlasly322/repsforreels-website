@@ -24,6 +24,7 @@
 		Star
 	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
+	import { haptic } from '$lib/haptics';
 
 	// Parallax star effect (matching homepage)
 	let scrollY = $state(0);
@@ -407,6 +408,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="hover:scale-105 transition-transform"
+						use:haptic
 					>
 						<img src="/badge-app-store.svg" alt="Download on the App Store" class="h-14" />
 					</a>
@@ -415,6 +417,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="hover:scale-105 transition-transform"
+						use:haptic
 					>
 						<img src="/badge-google-play.svg" alt="Get it on Google Play" class="h-14" />
 					</a>

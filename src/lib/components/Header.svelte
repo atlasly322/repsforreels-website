@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
+	import { haptic } from '$lib/haptics';
 
 	// Check if we're on a blog page
 	const isBlogPage = $derived(page.url.pathname.startsWith('/blog'));
@@ -41,7 +42,7 @@
 			</div>
 
 			<!-- Desktop CTA -->
-			<a href="/#download" class="hidden md:inline-flex group relative items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden">
+			<a href="/#download" class="hidden md:inline-flex group relative items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden" use:haptic>
 				<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45]"></div>
 				<div class="absolute inset-[1px] bg-background rounded-[10px] group-hover:bg-transparent transition-colors duration-300"></div>
 				<span class="relative bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] to-[#FCAF45] bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">Download</span>
@@ -71,7 +72,7 @@
 				<a href="/#faq" onclick={closeMenu} class="block py-2 text-text-secondary hover:text-white transition-colors">FAQ</a>
 
 				<!-- Mobile CTA -->
-				<a href="/#download" onclick={closeMenu} class="block mt-4 group relative text-center py-3 rounded-xl font-semibold text-sm overflow-hidden">
+				<a href="/#download" onclick={closeMenu} class="block mt-4 group relative text-center py-3 rounded-xl font-semibold text-sm overflow-hidden" use:haptic>
 					<div class="absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#DD2A7B] via-[#F77737] to-[#FCAF45]"></div>
 					<span class="relative text-white">Download</span>
 				</a>

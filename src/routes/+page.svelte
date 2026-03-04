@@ -2,6 +2,7 @@
 	import { generateAllStructuredData, siteConfig } from '$lib/seo';
 	import { onMount } from 'svelte';
 	import { ChevronDown, Star, Check, Lock } from 'lucide-svelte';
+	import { haptic } from '$lib/haptics';
 
 	// Parallax star effect
 	let scrollY = $state(0);
@@ -232,6 +233,7 @@
 							target="_blank"
 							rel="noopener noreferrer"
 							class="transition-transform hover:scale-105"
+							use:haptic
 						>
 							<img src="/badge-app-store.svg" alt="Download on the App Store" width="150" height="50" class="h-12" />
 						</a>
@@ -240,6 +242,7 @@
 							target="_blank"
 							rel="noopener noreferrer"
 							class="transition-transform hover:scale-105"
+							use:haptic
 						>
 							<img src="/badge-google-play.svg" alt="Get it on Google Play" width="150" height="50" class="h-12" />
 						</a>
@@ -488,6 +491,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="transition-transform hover:scale-105"
+				use:haptic
 			>
 				<img src="/badge-app-store.svg" alt="Download on the App Store" width="150" height="50" class="h-11" />
 			</a>
@@ -496,6 +500,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="transition-transform hover:scale-105"
+				use:haptic
 			>
 				<img src="/badge-google-play.svg" alt="Get it on Google Play" width="150" height="50" class="h-11" />
 			</a>
@@ -543,7 +548,7 @@
 					Turn your screen time addiction into fitness gains. RepsForReels blocks social media until you exercise. No reps, no reels.
 				</p>
 				<p class="text-text-muted text-sm">
-					Available on <a href="https://apps.apple.com/gb/app/repsforreels-app-blocker/id6757309601" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer">Android</a>.
+					Available on <a href="https://apps.apple.com/gb/app/repsforreels-app-blocker/id6757309601" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer" use:haptic>iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer" use:haptic>Android</a>.
 				</p>
 			</div>
 
