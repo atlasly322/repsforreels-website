@@ -27,7 +27,7 @@
 <main class="pt-24 pb-20">
 	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 		<h1 class="text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-		<p class="text-text-secondary mb-12">Last Updated: January 11, 2026</p>
+		<p class="text-text-secondary mb-12">Last Updated: June 12, 2026</p>
 
 		<div class="prose prose-invert prose-lg max-w-none">
 			<section class="mb-12">
@@ -80,9 +80,22 @@
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">3. Device Permissions We Request</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">3. Apple Health (HealthKit)</h2>
+				<p class="text-text-secondary mb-4">With your permission, RepsForReels can connect to Apple Health (HealthKit) to turn your real-world activity into earned screen time, as an alternative to the in-app camera exercises. This is how it works:</p>
+				<ul class="list-disc pl-6 text-text-secondary space-y-2">
+					<li><strong class="text-white">Read-only access</strong> to active energy burned, workouts, exercise minutes, and step count. We never write data to Apple Health.</li>
+					<li>All of this health data is processed <strong class="text-white">entirely on your device</strong> to calculate how much screen time you've earned.</li>
+					<li>Only the resulting <strong class="text-white">earned screen-time amount</strong> (a number) is saved to your account so your balance syncs — exactly like time earned from camera exercises. Your raw health data (calories, steps, workouts) <strong class="text-white">never leaves your device</strong> and is never stored on our servers.</li>
+					<li>We <strong class="text-white">never</strong> sell your health data, share it with third parties, or use it for advertising, marketing, or any tracking/data-mining purpose. We do not store health data in iCloud.</li>
+				</ul>
+				<p class="text-text-secondary mt-4">Connecting Apple Health is entirely optional. You can disconnect at any time in Settings &rarr; Apple Health within the app, or revoke access in the Apple Health app (Profile &rarr; Apps &rarr; RepsForReels).</p>
+			</section>
+
+			<section class="mb-12">
+				<h2 class="text-2xl font-bold text-white mb-4">4. Device Permissions We Request</h2>
 				<ul class="list-none space-y-4 text-text-secondary">
 					<li><strong class="text-white">Camera:</strong> Required for AI exercise pose detection. Processed entirely on your device.</li>
+					<li><strong class="text-white">Apple Health (HealthKit):</strong> Optional. Read-only access used to convert your real-world activity into earned screen time, processed on your device.</li>
 					<li><strong class="text-white">Screen Time / Usage Stats:</strong> Required to track your app usage and enable app blocking features. On iOS, this uses the Family Controls framework. On Android, this uses the Usage Stats API.</li>
 					<li><strong class="text-white">Notifications:</strong> Optional. Used for daily exercise reminders, milestone achievements, and screen time alerts.</li>
 					<li><strong class="text-white">Accessibility Service (Android only):</strong> Required for displaying the blocking overlay when you open restricted apps.</li>
@@ -90,7 +103,7 @@
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">4. Sensitive Data Protection</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">5. Sensitive Data Protection</h2>
 				<p class="text-text-secondary mb-4">We understand that some information you share is sensitive. The following data is encrypted and stored using your device's secure storage (iOS Keychain / Android Keystore):</p>
 				<ul class="list-disc pl-6 text-text-secondary space-y-2">
 					<li>Emotional impact responses from onboarding</li>
@@ -101,10 +114,11 @@
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">5. How We Use Your Data</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">6. How We Use Your Data</h2>
 				<p class="text-text-secondary mb-4">We use your information to:</p>
 				<ul class="list-disc pl-6 text-text-secondary space-y-2">
 					<li>Provide core app functionality (exercise counting, screen time tracking, app blocking)</li>
+					<li>Convert your activity — from camera exercises and, if you connect it, Apple Health — into earned screen time</li>
 					<li>Sync your exercise data across devices when you choose to</li>
 					<li>Send notifications if you've opted in</li>
 					<li>Calculate your dependency score and personalized recommendations</li>
@@ -114,14 +128,14 @@
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">6. Data Storage and Security</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">7. Data Storage and Security</h2>
 				<p class="text-text-secondary mb-4">Your data is protected using multiple layers of security:</p>
 				<p class="text-text-secondary mb-2"><strong class="text-white">Local Storage:</strong> Exercise data is stored locally using encrypted AsyncStorage. Sensitive data uses your device's secure storage (Keychain/Keystore).</p>
 				<p class="text-text-secondary">We implement industry-standard security measures including encryption at rest and in transit, secure authentication, and regular security reviews.</p>
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">7. Data Retention</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">8. Data Retention</h2>
 				<p class="text-text-secondary mb-4">We retain your data as follows:</p>
 				<ul class="list-disc pl-6 text-text-secondary space-y-2">
 					<li><strong class="text-white">Exercise session history:</strong> Last 100 sessions retained for statistics and progress tracking</li>
@@ -133,7 +147,7 @@
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">8. Data Sharing</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">9. Data Sharing</h2>
 				<p class="text-text-secondary mb-4"><strong class="text-accent">We do NOT sell your personal data.</strong></p>
 				<p class="text-text-secondary mb-4">We may share data in these limited circumstances:</p>
 				<ul class="list-disc pl-6 text-text-secondary space-y-2">
@@ -141,11 +155,11 @@
 					<li><strong class="text-white">Service providers:</strong> Third-party services that help us operate the app</li>
 					<li><strong class="text-white">Legal requirements:</strong> When required by law or to protect rights and safety</li>
 				</ul>
-				<p class="text-text-secondary mt-4">We never share your camera feed, images, exercise videos, or personally identifiable information with advertisers or data brokers.</p>
+				<p class="text-text-secondary mt-4">We never share your camera feed, images, exercise videos, Apple Health data, or personally identifiable information with advertisers or data brokers.</p>
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">9. Your Rights</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">10. Your Rights</h2>
 				<p class="text-text-secondary mb-4">You have the right to:</p>
 				<ul class="list-disc pl-6 text-text-secondary space-y-2">
 					<li><strong class="text-white">Access</strong> your personal data stored in our systems</li>
@@ -158,17 +172,17 @@
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">10. Children's Privacy</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">11. Children's Privacy</h2>
 				<p class="text-text-secondary">RepsForReels is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child under 13 has provided us with personal information, please contact us immediately. We will promptly delete such information.</p>
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">11. Changes to Privacy Policy</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">12. Changes to Privacy Policy</h2>
 				<p class="text-text-secondary">We may update this Privacy Policy from time to time. We will notify you of material changes through the App or via the email associated with your account. Your continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold text-white mb-4">12. Contact</h2>
+				<h2 class="text-2xl font-bold text-white mb-4">13. Contact</h2>
 				<p class="text-text-secondary">For questions about this Privacy Policy or to exercise your privacy rights, please contact us at <a href="mailto:vmars.innovation@gmail.com" class="text-accent hover:underline">vmars.innovation@gmail.com</a></p>
 			</section>
 		</div>

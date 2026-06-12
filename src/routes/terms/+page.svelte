@@ -27,7 +27,7 @@
 <main class="pt-24 pb-20">
 	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 		<h1 class="text-4xl font-bold text-white mb-2">Terms of Service</h1>
-		<p class="text-text-secondary mb-12">Last Updated: January 11, 2026</p>
+		<p class="text-text-secondary mb-12">Last Updated: June 12, 2026</p>
 
 		<div class="prose prose-invert prose-lg max-w-none">
 			<section class="mb-12">
@@ -63,6 +63,7 @@
 				<p class="text-text-secondary mb-4">Before starting any exercise program, you should consult with a qualified healthcare professional, especially if you have any medical conditions, injuries, or concerns about your physical health.</p>
 				<p class="text-text-secondary mb-4"><strong class="text-white">You exercise at your own risk.</strong> Stop immediately if you experience pain, dizziness, or discomfort. We are not responsible for any injuries that may occur during exercise.</p>
 				<p class="text-text-secondary">The AI pose detection provides general feedback and should not be relied upon for professional exercise instruction or physical therapy.</p>
+				<p class="text-text-secondary mt-4">If you connect Apple Health, RepsForReels reads your activity (read-only) solely to calculate earned screen time. It is not a medical, fitness, or health-tracking service, and your health data is not used for any health assessment, diagnosis, or advice.</p>
 			</section>
 
 			<section class="mb-12">
