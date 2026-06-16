@@ -27,7 +27,7 @@
 <main class="pt-24 pb-20">
 	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 		<h1 class="text-4xl font-bold text-white mb-2">Terms of Service</h1>
-		<p class="text-text-secondary mb-12">Last Updated: June 12, 2026</p>
+		<p class="text-text-secondary mb-12">Last Updated: June 16, 2026</p>
 
 		<div class="prose prose-invert prose-lg max-w-none">
 			<section class="mb-12">
@@ -37,7 +37,7 @@
 
 			<section class="mb-12">
 				<h2 class="text-2xl font-bold text-white mb-4">2. Description of Service</h2>
-				<p class="text-text-secondary">RepsForReels is a wellness application that encourages physical exercise by requiring users to complete exercises to earn screen time minutes. The App uses AI-powered pose detection to count exercise repetitions and integrates with your device's screen time management features to help you manage app usage.</p>
+				<p class="text-text-secondary">RepsForReels is a screen time reduction application. You set a daily screen time goal and earn the screen time you spend through physical activity — either by completing exercises that the App counts using AI-powered pose detection, or, on iOS, by connecting Apple Health so your real-world activity earns screen time automatically. The App integrates with your device's screen time management features to help you manage app usage.</p>
 			</section>
 
 			<section class="mb-12">

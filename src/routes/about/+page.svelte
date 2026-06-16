@@ -18,10 +18,8 @@
 		Eye,
 		Brain,
 		Timer,
-		TrendingDown,
 		Activity,
-		CheckCircle2,
-		Star
+		CheckCircle2
 	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { haptic } from '$lib/haptics';
@@ -101,10 +99,10 @@
 	];
 
 	const stats = [
-		{ value: '60%', label: 'Average screen time reduction', icon: TrendingDown },
-		{ value: '5min', label: 'Setup time', icon: Timer },
+		{ value: '2 ways', label: 'To earn screen time', icon: Activity },
 		{ value: '100%', label: 'On-device processing', icon: Eye },
-		{ value: '4.8★', label: 'User rating', icon: Star }
+		{ value: '5 min', label: 'To set up', icon: Timer },
+		{ value: 'Zero', label: 'Ads or trackers', icon: Lock }
 	];
 </script>
 
@@ -112,14 +110,14 @@
 	<title>About RepsForReels | What is RepsForReels?</title>
 	<meta
 		name="description"
-		content="Learn about RepsForReels - the mobile app that blocks social media until you exercise. Discover our mission to transform screen time addiction into fitness gains using AI-powered pose detection."
+		content="Learn about RepsForReels — the screen time reduction app that locks social media until you earn it back, with AI-counted exercises or your Apple Health activity."
 	/>
 	<meta name="keywords" content="about RepsForReels, what is RepsForReels, RepsForReels mission, exercise app blocker, AI fitness app" />
 	<link rel="canonical" href="{siteConfig.url}/about" />
 
 	<!-- Open Graph -->
 	<meta property="og:title" content="About RepsForReels | What is RepsForReels?" />
-	<meta property="og:description" content="Learn about RepsForReels - the mobile app that blocks social media until you exercise. Discover our mission to transform screen time addiction into fitness gains." />
+	<meta property="og:description" content="Learn about RepsForReels — the screen time reduction app that locks social media until you earn it back through movement, on-device and ad-free." />
 	<meta property="og:url" content="{siteConfig.url}/about" />
 	<meta property="og:type" content="website" />
 
@@ -185,8 +183,8 @@
 				</h1>
 
 				<p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-					<strong class="text-white">RepsForReels is a mobile application that blocks social media access until you complete physical exercises.</strong>
-					Using AI-powered pose detection technology, the app verifies exercises like pushups and squats in real-time, then rewards you with screen time minutes.
+					<strong class="text-white">RepsForReels is a screen time reduction app that locks social media until you earn the time back.</strong>
+					Earn it with pushups and squats counted by on-device AI — or connect Apple Health and let your everyday activity earn it automatically.
 				</p>
 			</div>
 
@@ -224,13 +222,13 @@
 
 						<div class="space-y-4 text-text-secondary leading-relaxed">
 							<p class="text-lg">
-								<strong class="text-white">RepsForReels is a fitness and digital wellbeing app</strong> designed to help people reduce their social media addiction by creating a positive exchange: exercise for screen time.
+								<strong class="text-white">RepsForReels is a screen time reduction app</strong> built on one simple idea: scrolling should have a price, and movement should pay it.
 							</p>
 							<p>
-								The core concept is simple: <span class="text-white font-semibold">"No reps, no reels."</span> Want to scroll Instagram or TikTok? First, do some pushups. The app's camera watches your form using on-device machine learning (nothing is uploaded or recorded), counts your reps accurately, and adds earned minutes to your screen time balance.
+								The core concept is <span class="text-white font-semibold">"No reps, no reels."</span> Want to scroll Instagram or TikTok? First earn the time — do some pushups while the camera counts your reps with on-device AI (nothing is uploaded or recorded), or connect <span class="text-white font-semibold">Apple Health</span> and let your walks, workouts and active energy bank screen time automatically.
 							</p>
 							<p>
-								Instead of fighting your phone addiction with willpower alone, you create a simple exchange: <span class="text-white font-semibold">exercise for entertainment</span>. Users report an average 60% reduction in screen time while simultaneously building consistent workout habits.
+								Instead of fighting your phone with willpower alone, you set a daily goal and earn your way past it. Going over your limit costs more to earn — gentle pressure that gradually <span class="text-white font-semibold">shrinks the scroll</span>.
 							</p>
 						</div>
 					</div>
@@ -336,10 +334,10 @@
 
 			<div class="grid md:grid-cols-4 gap-6">
 				{#each [
-					{ num: '01', title: 'Choose Apps', desc: 'Select which social media apps to restrict. Instagram, TikTok, YouTube, X, Snapchat - you decide.', gradient: 'from-[#833AB4] to-[#DD2A7B]' },
-					{ num: '02', title: 'Do Exercises', desc: 'Complete exercises when you want to use blocked apps. AI detects and counts your pushups and squats.', gradient: 'from-[#DD2A7B] to-[#F77737]' },
-					{ num: '03', title: 'Earn Time', desc: 'Each rep earns screen time minutes. These are banked and can be used whenever you want.', gradient: 'from-[#F77737] to-[#FCAF45]' },
-					{ num: '04', title: 'Track Progress', desc: 'View stats on exercise history, screen time savings, and fitness progress. Build streaks!', gradient: 'from-[#4ECDC4] to-[#7EDED7]' }
+					{ num: '01', title: 'Set Your Limit', desc: 'Pick the apps to block — Instagram, TikTok, YouTube, X, Snapchat — and set your daily screen-time goal.', gradient: 'from-[#833AB4] to-[#DD2A7B]' },
+					{ num: '02', title: 'Earn By Moving', desc: 'Do pushups or squats — AI counts every rep — or let your Apple Health activity earn time automatically.', gradient: 'from-[#DD2A7B] to-[#F77737]' },
+					{ num: '03', title: 'Bank & Spend', desc: 'Earned minutes bank in 5-minute slots and roll over. Spend them on your apps whenever you want.', gradient: 'from-[#F77737] to-[#FCAF45]' },
+					{ num: '04', title: 'Track Progress', desc: 'See your stats, streaks and screen time saved — and watch the scroll shrink week over week.', gradient: 'from-[#4ECDC4] to-[#7EDED7]' }
 				] as step, i}
 					<div class="group relative">
 						{#if i < 3}
@@ -399,7 +397,7 @@
 					<span class="text-white"> your screen time?</span>
 				</h2>
 				<p class="text-text-secondary mb-8 max-w-2xl mx-auto">
-					Join thousands who are turning their scrolling addiction into a fitness superpower with RepsForReels.
+					Take your screen time back — one rep, one walk at a time. Start your free 3-day trial of RepsForReels.
 				</p>
 
 				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">

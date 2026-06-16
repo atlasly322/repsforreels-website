@@ -7,9 +7,9 @@ export const siteConfig = {
 	alternateName: 'Reps For Reels',
 	tagline: 'No reps, no reels.',
 	description:
-		'RepsForReels is a screen time blocker and app blocker that locks social media until you exercise. Complete pushups and squats verified by AI pose detection to earn screen time. The dopamine detox app that turns doomscrolling into fitness gains.',
+		'RepsForReels locks social media until you move. Earn screen time with AI-counted exercises — or let your Apple Health activity earn it automatically. No reps, no reels.',
 	shortDescription:
-		'Block social media until you exercise. AI counts your reps. Earn screen time.',
+		'Lock social media behind movement. Earn screen time with exercises or your Apple Health activity.',
 	url: 'https://repsforreels.app',
 	ogImage: '/og-image.png',
 	logo: '/app-icon.png',
@@ -18,29 +18,29 @@ export const siteConfig = {
 	foundingDate: '2024',
 	appId: {
 		android: 'com.repsforreels.app',
-		ios: 'com.repsforreels.app' // Update when iOS launches
+		ios: 'com.repsforreels.app'
 	},
 	keywords: [
 		'RepsForReels',
+		'screen time reduction app',
 		'screen time blocker app',
 		'app blocker exercise',
 		'earn screen time',
+		'earn screen time with Apple Health',
+		'earn screen time by walking',
 		'block apps until workout',
 		'exercise to unlock phone',
-		'fitness app blocker',
 		'social media blocker',
 		'AI pose detection app',
 		'dopamine detox app',
-		'screen time limit exercise',
-		'parental control fitness',
+		'daily screen time goal app',
 		'pushup counter app',
 		'digital detox app',
 		'app that blocks social media until exercise',
-		'workout for screen time',
+		'Apple Health screen time',
 		'doomscrolling cure',
 		'phone addiction app',
-		'screen time control',
-		'gamified fitness'
+		'screen time control'
 	],
 	author: 'RepsForReels',
 	themeColor: '#833AB4',
@@ -186,8 +186,8 @@ export function generateMobileApplicationSchema() {
 		applicationCategory: 'HealthApplication',
 		applicationSubCategory: ['FitnessApplication', 'LifestyleApplication'],
 		operatingSystem: ['Android', 'iOS'],
-		softwareVersion: '1.0.3',
-		releaseNotes: 'AI-powered exercise detection, real app blocking, and screen time earning',
+		softwareVersion: '2.0.1',
+		releaseNotes: 'Earn screen time two ways — AI-counted exercises or Apple Health activity — plus daily screen time goals and system-level app blocking',
 		downloadUrl: siteConfig.socialLinks.appStore,
 		installUrl: siteConfig.socialLinks.appStore,
 		screenshot: [
@@ -211,14 +211,14 @@ export function generateMobileApplicationSchema() {
 			}
 		],
 		featureList: [
-			'AI-powered pose detection for exercise verification',
-			'Real-time rep counting for pushups and squats',
-			'Social media app blocking until exercises are completed',
-			'Screen time management through physical activity',
-			'Progress tracking with streaks and achievements',
-			'Privacy-first: all processing happens on-device',
-			'Time banking: configurable conversion rates from 30s to 3min per rep',
-			'Customizable app restrictions'
+			'Earn screen time with AI-counted pushups and squats',
+			'Earn screen time automatically from Apple Health activity (walks, workouts, active energy)',
+			'Set a daily screen time goal and bank the minutes you spend',
+			'System-level social media app blocking until you earn time',
+			'Real-time on-device AI pose detection — no video recorded or uploaded',
+			'Progress tracking with streaks, stats, and achievements',
+			'Time banking in 5-minute slots with daily rollover',
+			'Customizable app restrictions — block Instagram, TikTok, YouTube and more'
 		],
 		offers: [
 			{
@@ -234,7 +234,7 @@ export function generateMobileApplicationSchema() {
 				priceCurrency: 'USD',
 				availability: 'https://schema.org/InStock',
 				priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
-				description: 'RepsForReels Pro Monthly — unlimited sessions, all conversion rates, unlimited app blocking, ad-free'
+				description: 'RepsForReels Pro Monthly — unlimited sessions, all earning rates, unlimited app blocking, and Apple Health earning'
 			},
 			{
 				'@type': 'Offer',
@@ -261,6 +261,7 @@ export function generateMobileApplicationSchema() {
 		isAccessibleForFree: true,
 		permissions: [
 			'Camera access for AI pose detection (processed locally, never uploaded)',
+			'Apple Health access (optional, read-only) to earn screen time from real-world activity',
 			'App usage access for screen time management'
 		]
 	};
@@ -337,8 +338,8 @@ export function generateHowToSchema() {
 			{
 				'@type': 'HowToStep',
 				position: 3,
-				name: 'Complete exercises to earn screen time',
-				text: 'When you want to use a blocked app, complete exercises like pushups or squats. The AI-powered camera verifies your form and counts your reps in real-time. Choose your conversion rate — from 30 seconds to 3 minutes earned per rep.',
+				name: 'Earn screen time by moving',
+				text: 'Earn screen time two ways. Do exercises like pushups or squats — the on-device AI camera counts every rep in real-time. Or connect Apple Health and your everyday activity (walks, workouts, active energy) earns screen time automatically, no camera needed.',
 				url: `${siteConfig.url}/#how-it-works`
 			},
 			{

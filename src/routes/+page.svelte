@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { generateAllStructuredData, siteConfig } from '$lib/seo';
 	import { onMount } from 'svelte';
-	import { ChevronDown, Star, Check, Lock } from 'lucide-svelte';
+	import { ChevronDown, Check, Lock, Camera, Activity } from 'lucide-svelte';
 	import { haptic } from '$lib/haptics';
 
 	// Parallax star effect
@@ -61,7 +61,11 @@
 	const faqs = [
 		{
 			question: 'What is RepsForReels?',
-			answer: 'RepsForReels is a mobile app that blocks social media access until you complete physical exercises. Using AI-powered pose detection, the app verifies pushups, squats, and other exercises in real-time, then rewards you with screen time minutes. The core concept is "No reps, no reels" - you earn your scroll time through physical activity.'
+			answer: 'RepsForReels is a screen time reduction app that locks social media until you earn the time back through movement. You set a daily screen-time goal, then earn minutes two ways: do pushups and squats counted by on-device AI pose detection, or connect Apple Health so your everyday activity — walks, workouts, active energy — banks screen time automatically. The core idea is "No reps, no reels": scrolling has a price, and movement pays it.'
+		},
+		{
+			question: 'Can I earn screen time without exercising on camera?',
+			answer: 'Yes. On iPhone you can connect Apple Health, and your real-world activity — walks, workouts, exercise minutes and active energy — is converted into screen time automatically, with no camera and no manual logging. All health data is processed on your device; only the earned screen-time amount ever syncs to your account. It is a fully optional, read-only connection you can turn off at any time.'
 		},
 		{
 			question: 'How does the exercise detection work?',
@@ -69,11 +73,11 @@
 		},
 		{
 			question: 'Is it free?',
-			answer: 'RepsForReels includes a free 3-day trial with full access to all Pro features — the best way to try a screen time blocker and digital detox app risk-free. After the trial, a Pro subscription unlocks unlimited exercise sessions, all conversion rates, unlimited app blocking, and an ad-free experience. Plans start at $29.99/year or $4.99/month.'
+			answer: 'RepsForReels includes a free 3-day trial with full access to every Pro feature — the best way to try a screen time blocker risk-free. After the trial, Pro unlocks unlimited sessions, all earning rates, unlimited app blocking, and Apple Health earning. Plans are $29.99/year or $4.99/month, and there are no ads.'
 		},
 		{
 			question: 'How is RepsForReels different from other screen time apps?',
-			answer: 'Most screen time apps like Opal, ScreenZen, and Freedom rely on willpower — they block apps but give you nothing in return. RepsForReels is the only app blocker that rewards exercise with screen time. Instead of just locking your phone, it uses AI pose detection to verify real pushups and squats, then earns you minutes to scroll. It\'s positive reinforcement vs. pure restriction — and it builds a workout habit as a side effect.'
+			answer: 'Most screen time apps like Opal, ScreenZen, and Freedom rely on willpower — they block apps but give you nothing in return. RepsForReels is the only app blocker that makes you earn your screen time back through movement. Do real pushups and squats verified by AI pose detection, or let your Apple Health activity earn time automatically. It is positive reinforcement instead of pure restriction — it shrinks your screen time while building a movement habit.'
 		},
 		{
 			question: 'Which exercises are supported?',
@@ -96,8 +100,8 @@
 	const steps = [
 		{
 			number: '01',
-			title: 'Choose Your Apps',
-			description: 'Block <span class="text-coral">Instagram, TikTok, YouTube</span>, or any app that steals your time. <span class="text-white">You set the rules.</span>',
+			title: 'Set Your Limit',
+			description: 'Block <span class="text-coral">Instagram, TikTok, YouTube</span> — or any app — and set your <span class="text-white">daily screen-time goal</span>. You make the rules.',
 			image: {
 				webp: '/mockup-choose.webp',
 				png: '/mockup-choose.png',
@@ -108,8 +112,8 @@
 		},
 		{
 			number: '02',
-			title: 'Do Your Reps',
-			description: 'Pushups, squats — <span class="text-teal">AI watches your form</span> and counts every rep. <span class="text-white">No cheating.</span>',
+			title: 'Earn The Time',
+			description: 'Pushups and squats — <span class="text-teal">AI counts every rep</span>. Or skip the camera and let <span class="text-white">Apple Health</span> activity earn it for you.',
 			image: {
 				webp: '/mockup-reps.webp',
 				png: '/mockup-reps.png',
@@ -121,7 +125,7 @@
 		{
 			number: '03',
 			title: 'Scroll Guilt-Free',
-			description: 'Earned screen time <span class="text-success">unlocks your apps</span>. Bank it and spend it whenever you want.',
+			description: 'Earned time <span class="text-success">unlocks your apps</span> in 5-minute slots. Bank it, roll it over, spend it whenever you want.',
 			image: {
 				webp: '/mockup-block.webp',
 				png: '/mockup-block.png',
@@ -221,7 +225,7 @@
 				</h1>
 
 				<p class="text-lg sm:text-xl text-text-secondary max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-					You're spending <strong class="text-white">5+ hours a day</strong> <span class="text-coral font-semibold">doomscrolling</span>. That's <span class="text-white font-semibold">76 days a year</span> gone. RepsForReels <span class="text-primary font-semibold">locks your apps</span> until you exercise &mdash; <span class="text-teal font-semibold">do reps, earn screen time.</span> AI counts every rep. No cheating.
+					You lose <strong class="text-white">76 days a year</strong> to the <span class="text-coral font-semibold">scroll</span>. RepsForReels <span class="text-primary font-semibold">locks your apps</span> until you earn the time back &mdash; with <span class="text-teal font-semibold">quick reps</span> or your <span class="text-white font-semibold">Apple&nbsp;Health</span> activity.
 				</p>
 
 				<!-- Primary CTA -->
@@ -252,12 +256,6 @@
 				<!-- Trust signals -->
 				<div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 justify-center lg:justify-start text-sm text-text-secondary">
 					<div class="flex items-center gap-1.5">
-						<Star class="w-4 h-4 text-[#FCAF45] fill-[#FCAF45]" />
-						<span class="text-white font-medium">4.8</span>
-						<span>on the App Store</span>
-					</div>
-					<div class="hidden sm:block w-px h-4 bg-white/10"></div>
-					<div class="flex items-center gap-1.5">
 						<Check class="w-4 h-4 text-[#4ECDC4]" />
 						<span>Free 3-day trial</span>
 					</div>
@@ -265,6 +263,11 @@
 					<div class="flex items-center gap-1.5">
 						<Lock class="w-4 h-4 text-[#8DD04A]" />
 						<span>100% on-device privacy</span>
+					</div>
+					<div class="hidden sm:block w-px h-4 bg-white/10"></div>
+					<div class="flex items-center gap-1.5">
+						<Check class="w-4 h-4 text-[#4ECDC4]" />
+						<span>No ads, ever</span>
 					</div>
 				</div>
 			</div>
@@ -335,6 +338,54 @@
 	</div>
 </section>
 
+<!-- Two Ways to Earn Section -->
+<section class="py-24 relative z-10">
+	<div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-14" use:reveal={{ y: 20 }}>
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
+				<span class="text-white">Two ways to </span>
+				<span class="bg-gradient-to-r from-[#4ECDC4] to-[#7EDED7] bg-clip-text text-transparent">earn</span>
+			</h2>
+			<p class="text-lg text-text-secondary max-w-xl mx-auto">
+				Movement is the price of the scroll. Pay it however you like.
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-2 gap-6">
+			<!-- Reps -->
+			<div
+				class="relative bg-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 hover:border-[#4ECDC4]/25 transition-colors"
+				use:reveal={{ y: 30 }}
+			>
+				<div class="w-14 h-14 rounded-2xl bg-[#4ECDC4]/10 flex items-center justify-center mb-6">
+					<Camera class="w-7 h-7 text-[#4ECDC4]" />
+				</div>
+				<h3 class="text-2xl font-bold text-white mb-2">Do the reps</h3>
+				<p class="text-text-secondary leading-relaxed">
+					Pushups and squats, counted in real time by <span class="text-white">on-device AI</span>. Prop your phone up &mdash; nothing is ever recorded.
+				</p>
+			</div>
+
+			<!-- Apple Health -->
+			<div
+				class="relative bg-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 hover:border-[#FF6B6B]/25 transition-colors"
+				use:reveal={{ delay: 100, y: 30 }}
+			>
+				<div class="flex items-center justify-between mb-6">
+					<div class="w-14 h-14 rounded-2xl bg-[#FF6B6B]/10 flex items-center justify-center">
+						<Activity class="w-7 h-7 text-[#FF6B6B]" />
+					</div>
+					<span class="text-[11px] font-semibold uppercase tracking-wider text-text-muted border border-white/10 rounded-full px-2.5 py-1">iOS</span>
+				</div>
+				<h3 class="text-2xl font-bold text-white mb-2">Or just move</h3>
+				<p class="text-text-secondary leading-relaxed">
+					Connect <span class="text-white">Apple Health</span> and your walks, workouts and active energy bank screen time <span class="text-white">automatically</span> &mdash; no camera needed.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <!-- Why RepsForReels Section -->
 <section class="py-24 relative z-10">
 	<div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,7 +396,7 @@
 				<span class="text-white">?</span>
 			</h2>
 			<p class="text-lg text-text-secondary max-w-2xl mx-auto">
-				Other screen time apps rely on willpower. We reward you for healthy behavior.
+				Other apps just block your phone. We make you earn it &mdash; so scrolling finally has a price.
 			</p>
 		</div>
 
@@ -386,9 +437,9 @@
 				<div class="w-12 h-12 rounded-xl bg-[#F77737]/10 flex items-center justify-center mb-5">
 					<svg class="w-6 h-6 text-[#F77737]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 				</div>
-				<h3 class="text-xl font-bold text-white mb-3">Earn Your Screen Time</h3>
+				<h3 class="text-xl font-bold text-white mb-3">A Daily Goal That Holds</h3>
 				<p class="text-text-secondary leading-relaxed">
-					Every rep earns real screen time you can spend whenever you want. Bank minutes in the morning, use them later. A dopamine detox that rewards fitness instead of punishing scrolling.
+					Set your daily screen-time limit. Earned minutes bank in 5-minute slots and roll over &mdash; and going over your goal costs more to earn. Gentle pressure that actually shrinks the scroll.
 				</p>
 			</div>
 		</div>
@@ -545,7 +596,7 @@
 					</span>
 				</a>
 				<p class="text-text-secondary max-w-sm leading-relaxed mb-4">
-					Turn your screen time addiction into fitness gains. RepsForReels blocks social media until you exercise. No reps, no reels.
+					The screen time app that makes you earn it. RepsForReels locks social media until you move — do reps or sync Apple Health. No reps, no reels.
 				</p>
 				<p class="text-text-muted text-sm">
 					Available on <a href="https://apps.apple.com/gb/app/repsforreels-app-blocker/id6757309601" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer" use:haptic>iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.repsforreels.app" class="text-[#4ECDC4] hover:underline" target="_blank" rel="noopener noreferrer" use:haptic>Android</a>.
